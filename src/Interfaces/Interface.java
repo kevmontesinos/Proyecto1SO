@@ -27,37 +27,760 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        PanelPlantaKev = new javax.swing.JPanel();
+        AssemblersJ2 = new javax.swing.JTextField();
+        ProducersIntro2 = new javax.swing.JTextField();
+        ProducersCred2 = new javax.swing.JTextField();
+        ProducersStart2 = new javax.swing.JTextField();
+        ProducersClosers2 = new javax.swing.JTextField();
+        SumProducersClosers2 = new javax.swing.JButton();
+        MinusAssembler2 = new javax.swing.JButton();
+        SumAssemblers2 = new javax.swing.JButton();
+        SumProducersIntro2 = new javax.swing.JButton();
+        MinusProducersIntro2 = new javax.swing.JButton();
+        MinusProducersCred2 = new javax.swing.JButton();
+        SumProducersCred2 = new javax.swing.JButton();
+        MinusProducersStart2 = new javax.swing.JButton();
+        SumProducersStart1 = new javax.swing.JButton();
+        MinusProducersClosers2 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        ShowDashboard = new javax.swing.JToggleButton();
+        DriveIntro6 = new javax.swing.JTextField();
+        DriveIntro7 = new javax.swing.JTextField();
+        DriveIntro8 = new javax.swing.JTextField();
+        DriveIntro9 = new javax.swing.JTextField();
+        DriveIntro10 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        PanelPlantaJose = new javax.swing.JPanel();
+        ProducersClosers = new javax.swing.JTextField();
+        AssemblersJ1 = new javax.swing.JTextField();
+        ProducersIntro = new javax.swing.JTextField();
+        ProducersCred = new javax.swing.JTextField();
+        ProducersStart = new javax.swing.JTextField();
+        MinusProducersClosers = new javax.swing.JButton();
+        SumAssemblers = new javax.swing.JButton();
+        MinusAssembler = new javax.swing.JButton();
+        MinusProducersIntro = new javax.swing.JButton();
+        SumProducersIntro = new javax.swing.JButton();
+        SumProducersCred = new javax.swing.JButton();
+        MinusProducersCred = new javax.swing.JButton();
+        SumProducersStart = new javax.swing.JButton();
+        SumProducersClosers = new javax.swing.JButton();
+        MinusProducersStart = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        StartButton = new javax.swing.JToggleButton();
+        StopButton = new javax.swing.JToggleButton();
+        jLabel3 = new javax.swing.JLabel();
+        DriveIntro1 = new javax.swing.JTextField();
+        DriveIntro2 = new javax.swing.JTextField();
+        DriveIntro3 = new javax.swing.JTextField();
+        DriveIntro4 = new javax.swing.JTextField();
+        DriveIntro5 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        PanelPlantaKev.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        AssemblersJ2.setEditable(false);
+        AssemblersJ2.setText("1");
+        AssemblersJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssemblersJ2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(AssemblersJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 50, 40));
+
+        ProducersIntro2.setEditable(false);
+        ProducersIntro2.setText("1");
+        ProducersIntro2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersIntro2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(ProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 50, 40));
+
+        ProducersCred2.setEditable(false);
+        ProducersCred2.setText("1");
+        ProducersCred2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersCred2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(ProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 50, 40));
+
+        ProducersStart2.setEditable(false);
+        ProducersStart2.setText("1");
+        ProducersStart2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersStart2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(ProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 50, 40));
+
+        ProducersClosers2.setEditable(false);
+        ProducersClosers2.setText("1");
+        ProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersClosers2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(ProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 50, 40));
+
+        SumProducersClosers2.setText("+");
+        SumProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersClosers2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(SumProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 50, 40));
+
+        MinusAssembler2.setText("-");
+        MinusAssembler2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusAssembler2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(MinusAssembler2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 50, 40));
+
+        SumAssemblers2.setText("+");
+        SumAssemblers2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumAssemblers2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(SumAssemblers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 50, 40));
+
+        SumProducersIntro2.setText("+");
+        SumProducersIntro2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersIntro2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(SumProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 50, 40));
+
+        MinusProducersIntro2.setText("-");
+        MinusProducersIntro2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersIntro2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(MinusProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 50, 40));
+
+        MinusProducersCred2.setText("-");
+        MinusProducersCred2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersCred2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(MinusProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 50, 40));
+
+        SumProducersCred2.setText("+");
+        SumProducersCred2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersCred2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(SumProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 50, 40));
+
+        MinusProducersStart2.setText("-");
+        MinusProducersStart2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersStart2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(MinusProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 50, 40));
+
+        SumProducersStart1.setText("+");
+        SumProducersStart1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersStart1ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(SumProducersStart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 50, 40));
+
+        MinusProducersClosers2.setText("-");
+        MinusProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersClosers2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(MinusProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 50, 40));
+
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Planta de Productor de Contenido Kevin");
+        PanelPlantaKev.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Ensambladores");
+        PanelPlantaKev.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Productores de Intro");
+        PanelPlantaKev.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Productores de Creditos");
+        PanelPlantaKev.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Productores de Cierre");
+        PanelPlantaKev.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("Productores de PT");
+        PanelPlantaKev.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+
+        ShowDashboard.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        ShowDashboard.setText("Dashboard");
+        ShowDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShowDashboardActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(ShowDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 516, 110, 40));
+
+        DriveIntro6.setEditable(false);
+        DriveIntro6.setText("1");
+        DriveIntro6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro6ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(DriveIntro6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 20, 20));
+
+        DriveIntro7.setEditable(false);
+        DriveIntro7.setText("1");
+        DriveIntro7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro7ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(DriveIntro7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 20, 20));
+
+        DriveIntro8.setEditable(false);
+        DriveIntro8.setText("1");
+        DriveIntro8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro8ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(DriveIntro8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 20, 20));
+
+        DriveIntro9.setEditable(false);
+        DriveIntro9.setText("1");
+        DriveIntro9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro9ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(DriveIntro9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 20, 20));
+
+        DriveIntro10.setEditable(false);
+        DriveIntro10.setText("1");
+        DriveIntro10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro10ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(DriveIntro10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 20, 20));
+
+        jLabel26.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Drives:");
+        PanelPlantaKev.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 80, -1));
+
+        jLabel32.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("Intro");
+        PanelPlantaKev.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 40, -1));
+
+        jLabel33.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Credits");
+        PanelPlantaKev.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 50, -1));
+
+        jLabel34.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("Inicio");
+        PanelPlantaKev.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 40, -1));
+
+        jLabel35.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setText("Cierre");
+        PanelPlantaKev.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 40, -1));
+
+        jLabel36.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("PlotTwist");
+        PanelPlantaKev.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 70, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/got.png"))); // NOI18N
+        PanelPlantaKev.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-930, 0, 1390, 960));
+
+        getContentPane().add(PanelPlantaKev, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 430, 570));
+
+        PanelPlantaJose.setBackground(new java.awt.Color(2, 51, 54));
+        PanelPlantaJose.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ProducersClosers.setEditable(false);
+        ProducersClosers.setText("1");
+        ProducersClosers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersClosersActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 50, 40));
+
+        AssemblersJ1.setEditable(false);
+        AssemblersJ1.setText("1");
+        AssemblersJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssemblersJ1ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(AssemblersJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 50, 40));
+
+        ProducersIntro.setEditable(false);
+        ProducersIntro.setText("1");
+        ProducersIntro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersIntroActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(ProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 50, 40));
+
+        ProducersCred.setEditable(false);
+        ProducersCred.setText("1");
+        ProducersCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersCredActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(ProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 50, 40));
+
+        ProducersStart.setEditable(false);
+        ProducersStart.setText("1");
+        ProducersStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersStartActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(ProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 50, 40));
+
+        MinusProducersClosers.setText("-");
+        MinusProducersClosers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersClosersActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(MinusProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 50, 40));
+
+        SumAssemblers.setText("+");
+        SumAssemblers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumAssemblersActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(SumAssemblers, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 50, 40));
+
+        MinusAssembler.setText("-");
+        MinusAssembler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusAssemblerActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(MinusAssembler, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 50, 40));
+
+        MinusProducersIntro.setText("-");
+        MinusProducersIntro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersIntroActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(MinusProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 50, 40));
+
+        SumProducersIntro.setText("+");
+        SumProducersIntro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersIntroActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(SumProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 50, 40));
+
+        SumProducersCred.setText("+");
+        SumProducersCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersCredActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(SumProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 50, 40));
+
+        MinusProducersCred.setText("-");
+        MinusProducersCred.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersCredActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(MinusProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 50, 40));
+
+        SumProducersStart.setText("+");
+        SumProducersStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersStartActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(SumProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 50, 40));
+
+        SumProducersClosers.setText("+");
+        SumProducersClosers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SumProducersClosersActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(SumProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 50, 40));
+
+        MinusProducersStart.setText("-");
+        MinusProducersStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinusProducersStartActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(MinusProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 50, 40));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Planta de Productor de Contenido Jose");
+        PanelPlantaJose.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Productores de PT");
+        PanelPlantaJose.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Ensambladores");
+        PanelPlantaJose.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Productores de Intro");
+        PanelPlantaJose.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Productores de Creditos");
+        PanelPlantaJose.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Productores de Cierre");
+        PanelPlantaJose.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+
+        StartButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        StartButton.setText("Start");
+        StartButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartButtonActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(StartButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 70, 40));
+
+        StopButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        StopButton.setText("Stop");
+        StopButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StopButtonActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(StopButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 515, 70, 40));
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Drives:");
+        PanelPlantaJose.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 80, -1));
+
+        DriveIntro1.setEditable(false);
+        DriveIntro1.setText("1");
+        DriveIntro1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro1ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(DriveIntro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 20, 20));
+
+        DriveIntro2.setEditable(false);
+        DriveIntro2.setText("1");
+        DriveIntro2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(DriveIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 20, 20));
+
+        DriveIntro3.setEditable(false);
+        DriveIntro3.setText("1");
+        DriveIntro3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro3ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(DriveIntro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 20, 20));
+
+        DriveIntro4.setEditable(false);
+        DriveIntro4.setText("1");
+        DriveIntro4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro4ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(DriveIntro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 20, 20));
+
+        DriveIntro5.setEditable(false);
+        DriveIntro5.setText("1");
+        DriveIntro5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DriveIntro5ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(DriveIntro5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 20, 20));
+
+        jLabel27.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Credits");
+        PanelPlantaJose.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 50, -1));
+
+        jLabel28.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("Inicio");
+        PanelPlantaJose.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 40, -1));
+
+        jLabel29.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Cierre");
+        PanelPlantaJose.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 40, -1));
+
+        jLabel30.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setText("PlotTwist");
+        PanelPlantaJose.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 70, -1));
+
+        jLabel31.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("Intro");
+        PanelPlantaJose.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 40, -1));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/r&morty.jpg"))); // NOI18N
+        PanelPlantaJose.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-930, -120, 1600, 780));
+
+        getContentPane().add(PanelPlantaJose, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 570));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ProducersClosersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersClosersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersClosersActionPerformed
+
+    private void AssemblersJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssemblersJ1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssemblersJ1ActionPerformed
+
+    private void ProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersIntroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersIntroActionPerformed
+
+    private void ProducersCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersCredActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersCredActionPerformed
+
+    private void ProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersStartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersStartActionPerformed
+
+    private void MinusProducersClosersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersClosersActionPerformed
+
+    private void AssemblersJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssemblersJ2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssemblersJ2ActionPerformed
+
+    private void ProducersIntro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersIntro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersIntro2ActionPerformed
+
+    private void ProducersCred2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersCred2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersCred2ActionPerformed
+
+    private void ProducersStart2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersStart2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersStart2ActionPerformed
+
+    private void ProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersClosers2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersClosers2ActionPerformed
+
+    private void SumAssemblersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumAssemblersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumAssemblersActionPerformed
+
+    private void MinusAssemblerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusAssemblerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusAssemblerActionPerformed
+
+    private void MinusProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersIntroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersIntroActionPerformed
+
+    private void SumProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersIntroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersIntroActionPerformed
+
+    private void SumProducersCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersCredActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersCredActionPerformed
+
+    private void MinusProducersCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersCredActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersCredActionPerformed
+
+    private void SumProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersStartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersStartActionPerformed
+
+    private void SumProducersClosersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersClosersActionPerformed
+
+    private void MinusProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersStartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersStartActionPerformed
+
+    private void SumProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosers2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersClosers2ActionPerformed
+
+    private void MinusAssembler2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusAssembler2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusAssembler2ActionPerformed
+
+    private void SumAssemblers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumAssemblers2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumAssemblers2ActionPerformed
+
+    private void SumProducersIntro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersIntro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersIntro2ActionPerformed
+
+    private void MinusProducersIntro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersIntro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersIntro2ActionPerformed
+
+    private void MinusProducersCred2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersCred2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersCred2ActionPerformed
+
+    private void SumProducersCred2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersCred2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersCred2ActionPerformed
+
+    private void MinusProducersStart2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersStart2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersStart2ActionPerformed
+
+    private void SumProducersStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersStart1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SumProducersStart1ActionPerformed
+
+    private void MinusProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosers2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinusProducersClosers2ActionPerformed
+
+    private void ShowDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowDashboardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ShowDashboardActionPerformed
+
+    private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StartButtonActionPerformed
+
+    private void StopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StopButtonActionPerformed
+
+    private void DriveIntro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro1ActionPerformed
+
+    private void DriveIntro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro2ActionPerformed
+
+    private void DriveIntro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro3ActionPerformed
+
+    private void DriveIntro4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro4ActionPerformed
+
+    private void DriveIntro5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro5ActionPerformed
+
+    private void DriveIntro6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro6ActionPerformed
+
+    private void DriveIntro7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro7ActionPerformed
+
+    private void DriveIntro8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro8ActionPerformed
+
+    private void DriveIntro9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro9ActionPerformed
+
+    private void DriveIntro10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveIntro10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DriveIntro10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,8 +818,77 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane jSplitPane1;
+    public static javax.swing.JTextField AssemblersJ1;
+    public static javax.swing.JTextField AssemblersJ2;
+    public static javax.swing.JTextField DriveIntro1;
+    public static javax.swing.JTextField DriveIntro10;
+    public static javax.swing.JTextField DriveIntro2;
+    public static javax.swing.JTextField DriveIntro3;
+    public static javax.swing.JTextField DriveIntro4;
+    public static javax.swing.JTextField DriveIntro5;
+    public static javax.swing.JTextField DriveIntro6;
+    public static javax.swing.JTextField DriveIntro7;
+    public static javax.swing.JTextField DriveIntro8;
+    public static javax.swing.JTextField DriveIntro9;
+    private javax.swing.JButton MinusAssembler;
+    private javax.swing.JButton MinusAssembler2;
+    private javax.swing.JButton MinusProducersClosers;
+    private javax.swing.JButton MinusProducersClosers2;
+    private javax.swing.JButton MinusProducersCred;
+    private javax.swing.JButton MinusProducersCred2;
+    private javax.swing.JButton MinusProducersIntro;
+    private javax.swing.JButton MinusProducersIntro2;
+    private javax.swing.JButton MinusProducersStart;
+    private javax.swing.JButton MinusProducersStart2;
+    private javax.swing.JPanel PanelPlantaJose;
+    private javax.swing.JPanel PanelPlantaKev;
+    public static javax.swing.JTextField ProducersClosers;
+    public static javax.swing.JTextField ProducersClosers2;
+    public static javax.swing.JTextField ProducersCred;
+    public static javax.swing.JTextField ProducersCred2;
+    public static javax.swing.JTextField ProducersIntro;
+    public static javax.swing.JTextField ProducersIntro2;
+    public static javax.swing.JTextField ProducersStart;
+    public static javax.swing.JTextField ProducersStart2;
+    private javax.swing.JToggleButton ShowDashboard;
+    private javax.swing.JToggleButton StartButton;
+    private javax.swing.JToggleButton StopButton;
+    private javax.swing.JButton SumAssemblers;
+    private javax.swing.JButton SumAssemblers2;
+    private javax.swing.JButton SumProducersClosers;
+    private javax.swing.JButton SumProducersClosers2;
+    private javax.swing.JButton SumProducersCred;
+    private javax.swing.JButton SumProducersCred2;
+    private javax.swing.JButton SumProducersIntro;
+    private javax.swing.JButton SumProducersIntro2;
+    private javax.swing.JButton SumProducersStart;
+    private javax.swing.JButton SumProducersStart1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

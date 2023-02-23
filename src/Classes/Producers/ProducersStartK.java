@@ -9,6 +9,35 @@ package Classes.Producers;
  *
  * @author Kevin
  */
-public class ProducersStartK {
-    
+public class ProducersStartK extends Thread {
+
+    public int id;
+    public boolean stop;
+
+    public int tiempoDia = 1; //esto tiene que venir luego del json
+
+    public ProducersStartK(int id) {
+        this.stop = true;
+        this.id = id;
+
+    }
+
+    @Override
+    public void run() {
+        while (!stop) {
+            try {
+                Utils.ConstantsK.semStartK.acquire();
+                Utils.ConstantsK.mutexStartK.acquire();
+
+                Utils.ConstantsK.driveStartK++;
+
+                Utils.ConstantsK.mutexStartK.release();
+
+                Thread.sleep(tiempoDia * 4000); //1 starts cada 4 días
+
+            } catch (Exception e) {
+            }
+        }
+
+    }
 }

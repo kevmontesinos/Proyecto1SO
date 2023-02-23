@@ -9,6 +9,35 @@ package Classes.Producers;
  *
  * @author Kevin
  */
-public class ProducersClosureK {
-    
+public class ProducersClosureK extends Thread {
+
+    public int id;
+    public boolean stop;
+
+    public int tiempoDia = 1; //esto tiene que venir luego del json
+
+    public ProducersClosureK(int id) {
+        this.stop = true;
+        this.id = id;
+
+    }
+
+    @Override
+    public void run() {
+        while (!stop) {
+            try {
+                Utils.ConstantsK.semClosureK.acquire();
+                Utils.ConstantsK.mutexClosureK.acquire();
+
+                Utils.ConstantsK.driveClosureK++;
+                
+                Utils.ConstantsK.mutexClosureK.release();
+
+                Thread.sleep(tiempoDia * 3000); //1 closure cada 3 días
+
+            } catch (Exception e) {
+            }
+        }
+
+    }
 }

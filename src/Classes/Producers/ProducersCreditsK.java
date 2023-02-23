@@ -9,6 +9,35 @@ package Classes.Producers;
  *
  * @author Kevin Montesinos
  */
-public class ProducersCreditsK {
-    
+public class ProducersCreditsK extends Thread {
+
+    public int id;
+    public boolean stop;
+
+    public int tiempoDia = 1; //esto tiene que venir luego del json
+
+    public ProducersCreditsK(int id) {
+        this.stop = false;
+        this.id = id;
+
+    }
+
+    @Override
+    public void run() {
+        while (!stop) {
+            try {
+                Utils.ConstantsK.semCreditsK.acquire();
+                Utils.ConstantsK.mutexCreditsK.acquire();
+
+                Utils.ConstantsK.driveCreditsK++;
+
+                Utils.ConstantsK.mutexCreditsK.release();
+
+                Thread.sleep(tiempoDia * 1000 / 3); //3 credits por día
+
+            } catch (Exception e) {
+            }
+        }
+
+    }
 }

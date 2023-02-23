@@ -17,7 +17,7 @@ public class ProducersStartK extends Thread {
     public int tiempoDia = 1; //esto tiene que venir luego del json
 
     public ProducersStartK(int id) {
-        this.stop = true;
+        this.stop = false;
         this.id = id;
 
     }

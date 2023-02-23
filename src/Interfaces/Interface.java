@@ -9,6 +9,7 @@ package Interfaces;
  *
  * @author Jose Rubin
  */
+
 public class Interface extends javax.swing.JFrame {
 
     /**
@@ -16,6 +17,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
+        
     }
 
     /**
@@ -985,17 +987,14 @@ public class Interface extends javax.swing.JFrame {
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         // TODO add your handling code here:
-
 		//Seteo el numero de cada productor y ensamblador gracias a lo que coloquen en el textfield
-		Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
-		Utils.Constants.numProducerIntroJose = Integer.parseInt(ProducersIntro.getText());
-		Utils.Constants.numProducerStartJose = Integer.parseInt(ProducersInicio.getText());
-		Utils.Constants.numProducerClosureJose = Integer.parseInt(ProducersClosers.getText());
-		Utils.Constants.numProducerCreditsJose = Integer.parseInt(ProducersCred.getText());
-		Utils.Constants.numProducerPTJose = Integer.parseInt(ProducersPT.getText());
-
-
-
+		//Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
+		//Utils.Constants.numProducerIntroJose = Integer.parseInt(ProducersIntro.getText());
+		//Utils.Constants.numProducerStartJose = Integer.parseInt(ProducersInicio.getText());
+		//Utils.Constants.numProducerClosureJose = Integer.parseInt(ProducersClosers.getText());
+		//Utils.Constants.numProducerCreditsJose = Integer.parseInt(ProducersCred.getText());
+		//Utils.Constants.numProducerPTJose = Integer.parseInt(ProducersPT.getText());
+        Utils.InterfaceFunctionsK.startRun();
     }//GEN-LAST:event_StartButtonActionPerformed
 
     private void StopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopButtonActionPerformed

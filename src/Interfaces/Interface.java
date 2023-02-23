@@ -9,6 +9,7 @@ package Interfaces;
  *
  * @author Jose Rubin
  */
+
 public class Interface extends javax.swing.JFrame {
 
     /**
@@ -16,6 +17,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
+        
     }
 
     /**
@@ -835,7 +837,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_ShowDashboardActionPerformed
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.startRun();
     }//GEN-LAST:event_StartButtonActionPerformed
 
     private void StopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopButtonActionPerformed

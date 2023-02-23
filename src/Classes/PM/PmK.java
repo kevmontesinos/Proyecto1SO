@@ -9,6 +9,20 @@ package Classes.PM;
  *
  * @author Kevin
  */
-public class PmK {
+public class PmK extends Thread {
+    
+    public boolean stop;
+    
+    public PmK(){
+        this.stop = false;
+        
+    }
+    
+    @Override
+    public void run(){
+        while(!stop){
+            
+        }
+    }
     
 }

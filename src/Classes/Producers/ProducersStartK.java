@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Kevin
@@ -30,6 +32,7 @@ public class ProducersStartK extends Thread {
                 Utils.ConstantsK.mutexStartK.acquire();
 
                 Utils.ConstantsK.driveStartK++;
+                Interface.DriveInicio2.setText(Integer.toString(Utils.ConstantsK.driveStartK));
 
                 Utils.ConstantsK.mutexStartK.release();
 
@@ -39,5 +42,9 @@ public class ProducersStartK extends Thread {
             }
         }
 
+    }
+
+    public void stopRun() {
+        this.stop = true;
     }
 }

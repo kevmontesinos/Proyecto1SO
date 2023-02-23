@@ -19,6 +19,7 @@ public class Constants {
 	public static volatile int countdownJose=30;
 	public static int maxWorkersJose=15;
 
+	public static int numAssemblersJose;
 	public static int numProducerIntroJose;
 	public static int numProducerPTJose;
 	public static int numProducerClosureJose;

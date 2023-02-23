@@ -90,7 +90,6 @@ public class InterfaceFunctionsK {
 
         numCaps = 0;
         Interface.CapsTotal2.setText(Integer.toString(numCaps));
-        
 
         for (int i = 0; i < numProducerIntroKev; i++) {
             prodIntro = new ProducersIntroK(i);
@@ -141,4 +140,40 @@ public class InterfaceFunctionsK {
 
     }
 
+    public static void stopRun() {
+
+        while (!stackProducersIntroK.isEmpty()) {
+            stackProducersIntroK.peek().stopRun();
+            stackProducersIntroK.pop();
+        }
+
+        while (!stackProducersCreditsK.isEmpty()) {
+            stackProducersCreditsK.peek().stopRun();
+            stackProducersCreditsK.pop();
+        }
+
+        while (!stackProducersStartK.isEmpty()) {
+            stackProducersStartK.peek().stopRun();
+            stackProducersStartK.pop();
+        }
+
+        while (!stackProducersClosureK.isEmpty()) {
+            stackProducersClosureK.peek().stopRun();
+            stackProducersClosureK.pop();
+        }
+
+        while (!stackProducerPTK.isEmpty()) {
+            stackProducerPTK.peek().stopRun();
+            stackProducerPTK.pop();
+        }
+
+        while (!stackAssemblerK.isEmpty()) {
+            stackAssemblerK.peek().stopRun();
+            stackAssemblerK.pop();
+        }
+
+        pmK.stopRun();
+        directorK.stopRun();
+
+    }
 }

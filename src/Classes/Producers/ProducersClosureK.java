@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Kevin
@@ -30,7 +32,8 @@ public class ProducersClosureK extends Thread {
                 Utils.ConstantsK.mutexClosureK.acquire();
 
                 Utils.ConstantsK.driveClosureK++;
-                
+                Interface.DriveCierre2.setText(Integer.toString(Utils.ConstantsK.driveClosureK));
+
                 Utils.ConstantsK.mutexClosureK.release();
 
                 Thread.sleep(tiempoDia * 3000); //1 closure cada 3 días
@@ -39,5 +42,9 @@ public class ProducersClosureK extends Thread {
             }
         }
 
+    }
+
+    public void stopRun() {
+        this.stop = true;
     }
 }

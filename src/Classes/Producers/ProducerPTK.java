@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Kevin
@@ -30,6 +32,7 @@ public class ProducerPTK extends Thread {
                 Utils.ConstantsK.mutexPTK.acquire();
 
                 Utils.ConstantsK.drivePTK++;
+                Interface.DrivePt2.setText(Integer.toString(Utils.ConstantsK.drivePTK));
 
                 Utils.ConstantsK.mutexPTK.release();
 
@@ -39,5 +42,9 @@ public class ProducerPTK extends Thread {
             }
         }
 
+    }
+
+    public void stopRun() {
+        this.stop = true;
     }
 }

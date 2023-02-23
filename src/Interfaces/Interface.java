@@ -411,7 +411,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         countdownJose.setEditable(false);
-        countdownJose.setText("1");
+        countdownJose.setText(Integer.toString(Utils.Constants.countdownJose));
         countdownJose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 countdownJoseActionPerformed(evt);

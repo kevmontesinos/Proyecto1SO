@@ -55,9 +55,20 @@ public class ConstantsK {
     public static volatile int driveStartK = 0;
     public static volatile int driveClosureK = 0;
     public static volatile int drivePTK = 0;
+      
+    
+    //Cantidad de capítulos producidos/ensamblados
+    
+    public static volatile int numCaps = 0;
+    
+    //Mutex para el ensamblador
+  
+    public static Semaphore mutexAssemblerK = new Semaphore(1);
     
     //Project Manager
     public static volatile int countdownPmK;
+    
+    
 
     //Dinero Constantes
     public static int promedioGastosKev;

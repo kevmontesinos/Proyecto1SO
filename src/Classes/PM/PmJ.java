@@ -13,6 +13,10 @@ package Classes.PM;
     
     public boolean stop;
     
+	public void stopRun() {
+        this.stop = true;
+    }
+
     public PmJ(){
         this.stop = false;
         

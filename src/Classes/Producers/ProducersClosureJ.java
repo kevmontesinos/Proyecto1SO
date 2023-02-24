@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Jose Rubin
@@ -21,6 +23,10 @@ public class ProducersClosureJ extends Thread {
         this.id = id;
 
     }
+	
+public void stopRun() {
+        this.stop = true;
+    }
 
     @Override
     public void run() {
@@ -30,7 +36,8 @@ public class ProducersClosureJ extends Thread {
                 Utils.Constants.mutexClosureJ.acquire();
 
                 Utils.Constants.driveClosureJ++;
-                
+				Interface.DriveCierre.setText(Integer.toString(Utils.Constants.driveClosureJ));
+
                 Utils.Constants.mutexClosureJ.release();
 
                 Thread.sleep(tiempoDia * 2000); //1 closure cada 2 días

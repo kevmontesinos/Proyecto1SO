@@ -1,14 +1,18 @@
+package Utils;
 import static Interfaces.Interface.AssemblersJ1;
 import static Interfaces.Interface.AssemblersJ2;
 import static Interfaces.Interface.ProducersClosers;
 import static Interfaces.Interface.ProducersPT2;
+import static Interfaces.Interface.ProducersClosers2;
 import static Interfaces.Interface.ProducersCred;
 import static Interfaces.Interface.ProducersCred2;
 import static Interfaces.Interface.ProducersInicio;
 import static Interfaces.Interface.ProducersIntro;
 import static Interfaces.Interface.ProducersIntro2;
 import static Interfaces.Interface.ProducersPT;
+import static Interfaces.Interface.ProducersPT2;
 import static Interfaces.Interface.countdownJose;
+import static Interfaces.Interface.countdownKevin;
 import static Utils.Constants.countdownProductoraJ;
 import static Utils.Constants.driveMaxCierreJose;
 import static Utils.Constants.driveMaxCreditosJose;
@@ -21,19 +25,24 @@ import static Utils.Constants.numProducerCreditsJose;
 import static Utils.Constants.numProducerIntroJose;
 import static Utils.Constants.numProducerPTJose;
 import static Utils.Constants.numProducerStartJose;
-import static Utils.Constants.promedioGastosJose;
 import static Utils.Constants.promedioGananciasJose;
-import static Utils.Constants.promedioPerdidaPMJose;
+import static Utils.Constants.promedioGastosJose;
 import static Utils.Constants.promedioNumTotalCaps1;
+import static Utils.Constants.promedioPerdidaPMJose;
 import static Utils.ConstantsK.countdownProductoraK;
+import static Utils.ConstantsK.driveMaxCierreKev;
+import static Utils.ConstantsK.driveMaxCreditosKev;
+import static Utils.ConstantsK.driveMaxInicioKev;
+import static Utils.ConstantsK.driveMaxIntroKev;
+import static Utils.ConstantsK.driveMaxPlotTwistKev;
 import static Utils.ConstantsK.numAssemblerKev;
 import static Utils.ConstantsK.numProducerClosureKev;
 import static Utils.ConstantsK.numProducerCreditsKev;
 import static Utils.ConstantsK.numProducerIntroKev;
 import static Utils.ConstantsK.numProducerPTKev;
 import static Utils.ConstantsK.numProducerStartKev;
-import static Utils.ConstantsK.promedioGastosKev;
 import static Utils.ConstantsK.promedioGananciasKev;
+import static Utils.ConstantsK.promedioGastosKev;
 import static Utils.ConstantsK.promedioPerdidaJefesKev;
 import static Utils.WriteFile.txtAction;
 import java.util.ArrayList;
@@ -85,42 +94,33 @@ public class GetDatos {
                     countdownProductoraJ = Integer.valueOf((String)map.get(key));
                     countdownProductoraK = Integer.valueOf((String)map.get(key));
                     countdownJose.setText(Integer.toString(countdownProductoraJ));
-//                    countdownKev.setText(Integer.toString(countdownProductoraK));
+					countdownKevin.setText(Integer.toString(countdownProductoraK));
                     break;
-                case "driveMaxIntroJose":
+                case "driveMaxIntro":
                     driveMaxIntroJose = Integer.valueOf((String)map.get(key));
+					driveMaxIntroKev = Integer.valueOf((String)map.get(key));
                     break;
                 case "driveMaxInicioJose":
                     driveMaxInicioJose = Integer.valueOf((String)map.get(key));
+                    driveMaxInicioKev = Integer.valueOf((String)map.get(key));
                     break;
                 case "driveMaxCreditosJose":
                     driveMaxCreditosJose = Integer.valueOf((String)map.get(key));
+                    driveMaxCreditosKev = Integer.valueOf((String)map.get(key));
                     break;
                 case "driveMaxCierreJose":
                     driveMaxCierreJose = Integer.valueOf((String)map.get(key));
+                    driveMaxCierreKev = Integer.valueOf((String)map.get(key));
                     break;
                 case "driveMaxPlotTwistJose":
                     driveMaxPlotTwistJose = Integer.valueOf((String)map.get(key));
+                    driveMaxPlotTwistKev = Integer.valueOf((String)map.get(key));
                     break;
                 case "numAssemblersJose":
                     numAssemblersJose = Integer.valueOf((String)map.get(key));
                     AssemblersJ1.setText(Integer.toString(numAssemblersJose));
                     break;
-//                case "driveMaxIntroKev":
-//                    driveMaxIntroKev = Integer.valueOf((String)map.get(key));
-//                    break;
-//                case "driveMaxInicioKev":
-//                    driveMaxInicioKev = Integer.valueOf((String)map.get(key));
-//                    break;
-//                case "driveMaxCreditosKev":
-//                    driveMaxCreditosKev = Integer.valueOf((String)map.get(key));
-//                    break;
-//                case "driveMaxCierreKev":
-//                    driveMaxCierreKev = Integer.valueOf((String)map.get(key));
-//                    break;
-//                case "driveMaxPlotTwistKev":
-//                    driveMaxPlotTwistKev = Integer.valueOf((String)map.get(key));
-//                    break;
+
                 case "numAssemblersKev":
                     numAssemblerKev = Integer.valueOf((String)map.get(key));
                     AssemblersJ2.setText(Integer.toString(numAssemblerKev));

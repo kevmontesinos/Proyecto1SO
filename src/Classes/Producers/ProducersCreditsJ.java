@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Jose Rubin
@@ -21,6 +23,10 @@ public class ProducersCreditsJ extends Thread {
         this.id = id;
 
     }
+	
+	public void stopRun() {
+        this.stop = true;
+    }
 
     @Override
     public void run() {
@@ -30,6 +36,7 @@ public class ProducersCreditsJ extends Thread {
                 Utils.Constants.mutexCreditsJ.acquire();
 
                 Utils.Constants.driveCreditsJ++;
+                Interface.DriveCredits.setText(Integer.toString(Utils.Constants.driveCreditsJ));
 
                 Utils.Constants.mutexCreditsJ.release();
 

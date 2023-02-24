@@ -5,6 +5,8 @@
  */
 package Classes.Assemblers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Jose Rubin
@@ -73,7 +75,7 @@ public class AssemblerJ extends Thread {
 
                     //Se incrementa el número de capitulos producidos
                     Utils.Constants.numCapsJ++;
-
+					Interface.CapsTotal.setText(Integer.toString(Utils.Constants.numCapsJ));
                     //Se libera
                     Utils.Constants.mutexAssemblerJ.release();
 
@@ -87,6 +89,9 @@ public class AssemblerJ extends Thread {
             }
 
         }
+    }
+	public void stopRun() {
+        this.stop = true;
     }
     
 }

@@ -1,0 +1,22 @@
+[{
+    "tiempoDia": "3",
+    "countdown": "30",
+    "driveMaxIntroJose": "45",
+    "driveMaxInicioJose": "50",
+    "driveMaxCreditosJose": "25",
+    "driveMaxCierreJose": "55",
+    "driveMaxPlotTwistJose": "40",
+    "numAssemblersJose": "2",
+    "numAssemblersKev": "3",
+    "numProducerIntroJose":"3",
+    "numProducerCreditsJose":"3",
+    "numProducerClosureJose":"2",
+    "numProducerStartJose":"2",
+    "numProducerPTJose":"2",
+    "numProducerIntroKev":"3",
+    "numProducerCreditsKev":"2",
+    "numProducerClosureKev":"2",
+    "numProducerStartKev":"2",
+    "numProducerPTKev":"3"
+	
+}]

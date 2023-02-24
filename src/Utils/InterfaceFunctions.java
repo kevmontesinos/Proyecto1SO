@@ -23,6 +23,8 @@ import Classes.Producers.ProducersClosureJ;
 import Classes.Producers.ProducersCreditsJ;
 import Classes.Producers.ProducersIntroJ;
 import Classes.Producers.ProducersStartJ;
+import Interfaces.Interface;
+import static Utils.Constants.countdownJose;
 import static Utils.Constants.countdownProductoraJ;
 import static Utils.Constants.directorJ;
 import static Utils.Constants.driveClosureJ;
@@ -30,6 +32,7 @@ import static Utils.Constants.driveCreditsJ;
 import static Utils.Constants.driveIntroJ;
 import static Utils.Constants.drivePTJ;
 import static Utils.Constants.driveStartJ;
+import static Utils.Constants.maxWorkersJose;
 import static Utils.Constants.numAssemblersJose;
 import static Utils.Constants.numCapsJ;
 import static Utils.Constants.numProducerClosureJose;
@@ -49,6 +52,7 @@ import static Utils.Constants.stackProducersClosureJ;
 import static Utils.Constants.stackProducersCreditsJ;
 import static Utils.Constants.stackProducersIntroJ;
 import static Utils.Constants.stackProducersStartJ;
+import javax.swing.JOptionPane;
 
 public class InterfaceFunctions {
 
@@ -132,6 +136,220 @@ public class InterfaceFunctions {
         System.out.println("HOLA");
 
     }
+
+     public static void stopRun() {
+
+        while (!stackProducersIntroJ.isEmpty()) {
+            stackProducersIntroJ.peek().stopRun();
+            stackProducersIntroJ.pop();
+        }
+
+        while (!stackProducersCreditsJ.isEmpty()) {
+            stackProducersCreditsJ.peek().stopRun();
+            stackProducersCreditsJ.pop();
+        }
+
+        while (!stackProducersStartJ.isEmpty()) {
+            stackProducersStartJ.peek().stopRun();
+            stackProducersStartJ.pop();
+        }
+
+        while (!stackProducersClosureJ.isEmpty()) {
+            stackProducersClosureJ.peek().stopRun();
+            stackProducersClosureJ.pop();
+        }
+
+        while (!stackProducerPTJ.isEmpty()) {
+            stackProducerPTJ.peek().stopRun();
+            stackProducerPTJ.pop();
+        }
+
+        while (!stackAssemblerJ.isEmpty()) {
+            stackAssemblerJ.peek().stopRun();
+            stackAssemblerJ.pop();
+        }
+
+        pmJ.stopRun();
+        directorJ.stopRun();
+
+    }
+
+    public static void minusProducersIntro() {
+        if (numProducerIntroJose > 1) {
+            numProducerIntroJose--;
+            Interface.ProducersIntro.setText(Integer.toString(numProducerIntroJose));
+            if (countdownJose < 30) {
+                stackProducersIntroJ.peek().stopRun();
+                stackProducersIntroJ.pop();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se llegó a la cantidad mínima.");
+        }
+    }
+
+    public static void minusProducersCred() {
+        if (numProducerCreditsJose > 1) {
+            numProducerCreditsJose--;
+            Interface.ProducersCred.setText(Integer.toString(numProducerCreditsJose));
+            if (countdownProductoraJ < 30) {
+                stackProducersCreditsJ.peek().stopRun();
+                stackProducersCreditsJ.pop();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se llegó a la cantidad mínima.");
+        }
+    }
+
+    public static void minusProducersStart() {
+        if (numProducerStartJose > 1) {
+            numProducerStartJose--;
+            Interface.ProducersInicio.setText(Integer.toString(numProducerStartJose));
+            if (countdownProductoraJ < 30) {
+                stackProducersStartJ.peek().stopRun();
+                stackProducersStartJ.pop();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se llegó a la cantidad mínima.");
+        }
+    }
+
+    public static void minusProducersClosers() {
+        if (numProducerClosureJose > 1) {
+            numProducerClosureJose--;
+            Interface.ProducersClosers.setText(Integer.toString(numProducerClosureJose));
+            if (countdownProductoraJ < 30) {
+                stackProducersClosureJ.peek().stopRun();
+                stackProducersClosureJ.pop();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se llegó a la cantidad mínima.");
+        }
+    }
+
+    public static void minusProducersPT() {
+        if (numProducerPTJose > 1) {
+            numProducerPTJose--;
+            Interface.ProducersPT.setText(Integer.toString(numProducerPTJose));
+            if (countdownProductoraJ < 30) {
+                stackProducerPTJ.peek().stopRun();
+                stackProducerPTJ.pop();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se llegó a la cantidad mínima.");
+        }
+    }
+
+    public static void minusAssemblers() {
+        if (numAssemblersJose > 1) {
+            numAssemblersJose--;
+            Interface.AssemblersJ1.setText(Integer.toString(numAssemblersJose));
+            if (countdownProductoraJ < 30) {
+                stackAssemblerJ.peek().stopRun();
+                stackAssemblerJ.pop();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se llegó a la cantidad mínima.");
+        }
+    }
+
+    public static void sumProducersIntro() {
+        int numTotalProducers = numProducerIntroJose + numProducerCreditsJose + numProducerStartJose + numProducerClosureJose + numProducerPTJose + numAssemblersJose;
+
+        if (numTotalProducers < maxWorkersJose) {
+            numProducerIntroJose++;
+            Interface.ProducersIntro.setText(Integer.toString(numProducerIntroJose));
+
+            if (countdownProductoraJ < 30) {
+                prodIntro = new ProducersIntroJ(numProducerIntroJose);
+                stackProducersIntroJ.push(prodIntro);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se excedió el número de productores totales");
+        }
+    }
+
+    public static void sumProducersCred() {
+        int numTotalProducers = numProducerIntroJose + numProducerCreditsJose + numProducerStartJose + numProducerClosureJose + numProducerPTJose + numAssemblersJose;
+
+        if (numTotalProducers < maxWorkersJose) {
+            numProducerCreditsJose++;
+            Interface.ProducersCred.setText(Integer.toString(numProducerCreditsJose));
+
+            if (countdownProductoraJ < 30) {
+                prodCredits = new ProducersCreditsJ(numProducerCreditsJose);
+                stackProducersCreditsJ.push(prodCredits);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se excedió el número de productores totales");
+        }
+    }
+
+    public static void sumProducersStart() {
+        int numTotalProducers = numProducerIntroJose + numProducerCreditsJose + numProducerStartJose + numProducerClosureJose + numProducerPTJose + numAssemblersJose;
+
+        if (numTotalProducers < maxWorkersJose) {
+            numProducerStartJose++;
+            Interface.ProducersInicio.setText(Integer.toString(numProducerStartJose));
+
+            if (countdownProductoraJ < 30) {
+                prodStart = new ProducersStartJ(numProducerStartJose);
+                stackProducersStartJ.push(prodStart);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se excedió el número de productores totales");
+        }
+    }
+
+    public static void sumProducersClosers() {
+        int numTotalProducers = numProducerIntroJose + numProducerCreditsJose + numProducerStartJose + numProducerClosureJose + numProducerPTJose + numAssemblersJose;
+
+        if (numTotalProducers < maxWorkersJose) {
+            numProducerClosureJose++;
+            Interface.ProducersClosers.setText(Integer.toString(numProducerClosureJose));
+
+            if (countdownProductoraJ < 30) {
+                prodClosure = new ProducersClosureJ(numProducerClosureJose);
+                stackProducersClosureJ.push(prodClosure);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se excedió el número de productores totales");
+        }
+    }
+
+    public static void sumProducersPT() {
+        int numTotalProducers = numProducerIntroJose + numProducerCreditsJose + numProducerStartJose + numProducerClosureJose + numProducerPTJose + numAssemblersJose;
+
+        if (numTotalProducers < maxWorkersJose) {
+            numProducerPTJose++;
+            Interface.ProducersPT.setText(Integer.toString(numProducerPTJose));
+
+            if (countdownProductoraJ < 30) {
+                prodPT = new ProducerPTJ(numProducerPTJose);
+                stackProducerPTJ.push(prodPT);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se excedió el número de productores totales");
+        }
+    }
+
+    public static void sumAssemblers() {
+
+        int numTotalProducers = numProducerIntroJose + numProducerCreditsJose + numProducerStartJose + numProducerClosureJose + numProducerPTJose + numAssemblersJose;
+
+        if (numTotalProducers < maxWorkersJose) {
+            numAssemblersJose++;
+            Interface.AssemblersJ1.setText(Integer.toString(numAssemblersJose));
+
+            if (countdownProductoraJ < 30) {
+                assembler = new AssemblerJ(numAssemblersJose);
+                stackAssemblerJ.push(assembler);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Se excedió el número de trabajadores totales");
+        }
+    }
+
+
 
 }
 

@@ -5,6 +5,7 @@
  */
 package Classes.Assemblers;
 
+import Interfaces.Interface;
 import Utils.ConstantsK;
 
 /**
@@ -42,6 +43,7 @@ public class AssemblerK extends Thread {
                     Utils.ConstantsK.mutexIntroK.acquire();
                     Utils.ConstantsK.semIntroK.acquire();
                     Utils.ConstantsK.driveIntroK--;
+                    Interface.DriveIntro2.setText(Integer.toString(Utils.ConstantsK.driveIntroK));
                     Utils.ConstantsK.semIntroK.release();
                     Utils.ConstantsK.mutexIntroK.release();
 
@@ -49,6 +51,7 @@ public class AssemblerK extends Thread {
                     Utils.ConstantsK.mutexCreditsK.acquire();
                     Utils.ConstantsK.semCreditsK.acquire();
                     Utils.ConstantsK.driveCreditsK--;
+                    Interface.DriveCredits2.setText(Integer.toString(Utils.ConstantsK.driveCreditsK));
                     Utils.ConstantsK.semCreditsK.release();
                     Utils.ConstantsK.mutexCreditsK.release();
 
@@ -56,6 +59,7 @@ public class AssemblerK extends Thread {
                     Utils.ConstantsK.mutexStartK.acquire();
                     Utils.ConstantsK.semStartK.acquire();
                     Utils.ConstantsK.driveStartK--;
+                    Interface.DriveInicio2.setText(Integer.toString(Utils.ConstantsK.driveStartK));
                     Utils.ConstantsK.semStartK.release();
                     Utils.ConstantsK.mutexStartK.release();
 
@@ -63,6 +67,7 @@ public class AssemblerK extends Thread {
                     Utils.ConstantsK.mutexClosureK.acquire();
                     Utils.ConstantsK.semClosureK.acquire();
                     Utils.ConstantsK.driveClosureK--;
+                    Interface.DriveCierre2.setText(Integer.toString(Utils.ConstantsK.driveClosureK));
                     Utils.ConstantsK.semClosureK.release();
                     Utils.ConstantsK.mutexClosureK.release();
 
@@ -70,11 +75,13 @@ public class AssemblerK extends Thread {
                     Utils.ConstantsK.mutexPTK.acquire();
                     Utils.ConstantsK.semPTK.acquire();
                     Utils.ConstantsK.drivePTK--;
+                    Interface.DrivePt2.setText(Integer.toString(Utils.ConstantsK.drivePTK));
                     Utils.ConstantsK.semPTK.release();
                     Utils.ConstantsK.mutexPTK.release();
 
                     //Se incrementa el número de capitulos producidos
                     Utils.ConstantsK.numCaps++;
+                    Interface.CapsTotal2.setText(Integer.toString(Utils.ConstantsK.numCaps));
 
                     //Se libera
                     Utils.ConstantsK.mutexAssemblerK.release();
@@ -89,6 +96,10 @@ public class AssemblerK extends Thread {
             }
 
         }
+    }
+
+    public void stopRun() {
+        this.stop = true;
     }
 
 }

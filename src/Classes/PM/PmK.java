@@ -25,4 +25,8 @@ public class PmK extends Thread {
         }
     }
     
+    public void stopRun() {
+        this.stop = true;
+    }
+    
 }

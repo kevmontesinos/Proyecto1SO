@@ -21,7 +21,7 @@ import static Utils.Constants.numProducerIntroJose;
 import static Utils.Constants.numProducerPTJose;
 import static Utils.Constants.numProducerStartJose;
 import static Utils.Constants.tiempoDia;
-import Utils.InterfaceFunctionsK;
+import Utils.InterfaceFunctions;
 import Utils.WriteFile;
 
 public class PmJ extends Thread {
@@ -67,6 +67,7 @@ public class PmJ extends Thread {
 
                     int ingresosProductoraJ = numCapsJ * 1960 / 3;
                     Interface.Ganancia1.setText(Integer.toString(ingresosProductoraJ - gastosProductoraJ()));
+					
 
                     mutexCountdownJ.release();
 
@@ -80,7 +81,7 @@ public class PmJ extends Thread {
 
                     }
                 } else {
-                    InterfaceFunctionsK.stopRun();
+                    InterfaceFunctions.stopRun();
                     writeNewData.writeData();
                 }
 

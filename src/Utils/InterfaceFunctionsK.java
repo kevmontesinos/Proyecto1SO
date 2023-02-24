@@ -17,6 +17,7 @@ import Classes.Producers.ProducersClosureK;
 import Classes.Producers.ProducersCreditsK;
 import Classes.Producers.ProducersIntroK;
 import Classes.Producers.ProducersStartK;
+import Interfaces.Interface;
 
 import static Utils.ConstantsK.countdownProductoraK;
 import static Utils.ConstantsK.semClosureK;
@@ -65,72 +66,114 @@ public class InterfaceFunctionsK {
 
     public static void startRun() {
         countdownProductoraK = 30;
-        
-        //me falta actualizar la interfaz aquí
 
+        //Reiniciar semáforos y valores de la interfaz.
         semIntroK.release(driveIntroK);
         driveIntroK = 0;
+        Interface.DriveIntro2.setText(Integer.toString(driveIntroK));
 
         semCreditsK.release(driveCreditsK);
         driveCreditsK = 0;
+        Interface.DriveCredits2.setText(Integer.toString(driveCreditsK));
 
-        semIntroK.release(driveIntroK);
-        driveIntroK = 0;
+        semStartK.release(driveStartK);
+        driveStartK = 0;
+        Interface.DriveInicio2.setText(Integer.toString(driveStartK));
 
         semClosureK.release(driveClosureK);
         driveClosureK = 0;
+        Interface.DriveCierre2.setText(Integer.toString(driveClosureK));
 
         semPTK.release(drivePTK);
         drivePTK = 0;
+        Interface.DrivePt2.setText(Integer.toString(drivePTK));
 
         numCaps = 0;
+        Interface.CapsTotal2.setText(Integer.toString(numCaps));
 
         for (int i = 0; i < numProducerIntroKev; i++) {
             prodIntro = new ProducersIntroK(i);
             prodIntro.start();
+
             stackProducersIntroK.push(prodIntro);
         }
 
         for (int i = 0; i < numProducerCreditsKev; i++) {
             prodCredits = new ProducersCreditsK(i);
             prodCredits.start();
-            //Apilo cada thread a la pila  de productores botones
+
             stackProducersCreditsK.push(prodCredits);
         }
 
         for (int i = 0; i < numProducerStartKev; i++) {
             prodStart = new ProducersStartK(i);
             prodStart.start();
-            //Apilo cada thread a la pila  de productores botones
+
             stackProducersStartK.push(prodStart);
         }
 
         for (int i = 0; i < numProducerClosureKev; i++) {
             prodClosure = new ProducersClosureK(i);
             prodClosure.start();
-            //Apilo cada thread a la pila  de productores botones
+
             stackProducersClosureK.push(prodClosure);
         }
 
         for (int i = 0; i < numProducerPTKev; i++) {
             prodPT = new ProducerPTK(i);
             prodPT.start();
+
             stackProducerPTK.push(prodPT);
         }
 
-        for (int i = 0; i < numProducerPTKev; i++) {
+        for (int i = 0; i < numAssemblerKev; i++) {
             assembler = new AssemblerK(i);
             assembler.start();
+
             stackAssemblerK.push(assembler);
         }
-        
+
         pmK = new PmK();
         pmK.start();
         directorK = new DirectorK();
         directorK.start();
 
-        System.out.println("HOLA");
-
     }
 
+    public static void stopRun() {
+
+        while (!stackProducersIntroK.isEmpty()) {
+            stackProducersIntroK.peek().stopRun();
+            stackProducersIntroK.pop();
+        }
+
+        while (!stackProducersCreditsK.isEmpty()) {
+            stackProducersCreditsK.peek().stopRun();
+            stackProducersCreditsK.pop();
+        }
+
+        while (!stackProducersStartK.isEmpty()) {
+            stackProducersStartK.peek().stopRun();
+            stackProducersStartK.pop();
+        }
+
+        while (!stackProducersClosureK.isEmpty()) {
+            stackProducersClosureK.peek().stopRun();
+            stackProducersClosureK.pop();
+        }
+
+        while (!stackProducerPTK.isEmpty()) {
+            stackProducerPTK.peek().stopRun();
+            stackProducerPTK.pop();
+        }
+
+        while (!stackAssemblerK.isEmpty()) {
+            stackAssemblerK.peek().stopRun();
+            stackAssemblerK.pop();
+        }
+
+        pmK.stopRun();
+        directorK.stopRun();
+
+    }
 }

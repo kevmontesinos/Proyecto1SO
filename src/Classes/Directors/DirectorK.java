@@ -10,5 +10,22 @@ package Classes.Directors;
  * @author Kevin
  */
 public class DirectorK extends Thread {
-    
+
+    public boolean stop;
+
+    public DirectorK() {
+        this.stop = false;
+    }
+
+    @Override
+    public void run() {
+        while (!stop) {
+
+        }
+    }
+
+    public void stopRun() {
+        this.stop = true;
+    }
+
 }

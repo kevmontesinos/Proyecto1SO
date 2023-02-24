@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Kevin Montesinos
@@ -30,6 +32,7 @@ public class ProducersCreditsK extends Thread {
                 Utils.ConstantsK.mutexCreditsK.acquire();
 
                 Utils.ConstantsK.driveCreditsK++;
+                Interface.DriveCredits2.setText(Integer.toString(Utils.ConstantsK.driveCreditsK));
 
                 Utils.ConstantsK.mutexCreditsK.release();
 
@@ -39,5 +42,9 @@ public class ProducersCreditsK extends Thread {
             }
         }
 
+    }
+
+    public void stopRun() {
+        this.stop = true;
     }
 }

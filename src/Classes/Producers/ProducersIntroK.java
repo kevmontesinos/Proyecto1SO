@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Kevin
@@ -30,17 +32,21 @@ public class ProducersIntroK extends Thread {
                 Utils.ConstantsK.mutexIntroK.acquire();
 
                 Utils.ConstantsK.driveIntroK++;
+                Interface.DriveIntro2.setText(Integer.toString(Utils.ConstantsK.driveIntroK));
 
                 Utils.ConstantsK.mutexIntroK.release();
-                
-                //el semáforo de la intro se hará realease cuando el ensamblador usé alguna intro
 
+                //el semáforo de la intro se hará realease cuando el ensamblador usé alguna intro
                 Thread.sleep(tiempoDia * 1000 / 3); //3 intros por día
 
             } catch (Exception e) {
             }
         }
 
+    }
+
+    public void stopRun() {
+        this.stop = true;
     }
 
 }

@@ -9,6 +9,7 @@ import Interfaces.Interface;
 import static Utils.Constants.countdownProductoraJ;
 import static Utils.Constants.counterPM;
 import static Utils.Constants.descuentoPM;
+import static Utils.Constants.estadoDirector;
 import static Utils.Constants.estadoPm;
 import static Utils.Constants.mutexCountdownJ;
 import static Utils.Constants.numCapsJ;
@@ -41,12 +42,12 @@ public boolean stop;
 			try{
 				
 				mutexCountdownJ.acquire();
-				estadoPm = "Esperando contador";
+				estadoDirector = "Esperando contador";
 				
-				Interface.Pm1.setText(estadoPm);
+				Interface.Director1.setText(estadoDirector);
 				if(countdownProductoraJ>0){
-					estadoPm = "Sprints Reviews";
-					Interface.Pm1.setText(estadoPm);
+					estadoDirector = "Sprints Reviews";
+					Interface.Director1.setText(estadoDirector);
 
 					mutexCountdownJ.release();
 					PeriodoTrabajo = (int) (Math.random() * (1080+60-720)) + 720;
@@ -57,9 +58,11 @@ public boolean stop;
 
 						if (estadoPm.equalsIgnoreCase("Ricky y Morty")){
 							descuentoPM = descuentoPM+1;
-							counterPM=counterPM++;
-//							Interface.RegistroPM1.setText(counterPM);
-							Interface.Pm1.setText(estadoPm);
+							counterPM=counterPM+1;
+							System.out.println(counterPM);
+							Interface.SalarioPm1.setText(Integer.toString(descuentoPM));
+							Interface.RegistroPM1.setText(Integer.toString(counterPM));
+							Interface.Director1.setText(estadoDirector);
 						}
 						Thread.sleep(tiempoDia);
 					}
@@ -68,8 +71,8 @@ public boolean stop;
 					numCapsJ=0;
 				}
 				
-				estadoPm="Casa";
-				Interface.Pm1.setText(estadoPm);
+				estadoDirector="Casa";
+				Interface.Director1.setText(estadoDirector);
 				Thread.sleep(tiempoDia*(MinutosEnUnDia-PeriodoTrabajo));
 				
 			}catch (InterruptedException ex) {

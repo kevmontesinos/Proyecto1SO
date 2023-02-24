@@ -74,6 +74,7 @@ public class Constants {
     //Instancia PM
     public static PmJ pmJ;
 	public static String estadoPm="" ;
+	public static String estadoDirector="" ;
 	
     //Project Manager
     public static volatile int countdownProductoraJ;

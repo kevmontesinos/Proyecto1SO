@@ -5,6 +5,15 @@
  */
 package Classes.Directors;
 
+import Interfaces.Interface;
+import static Utils.ConstantsK.countdownProductoraK;
+import static Utils.ConstantsK.counterPM;
+import static Utils.ConstantsK.descuentoPM;
+import static Utils.ConstantsK.estadoDirector;
+import static Utils.ConstantsK.estadoPm;
+import static Utils.ConstantsK.mutexCountdown;
+import static Utils.ConstantsK.numTotalCapsKev;
+import static Utils.ConstantsK.tiempoDia;
 /**
  *
  * @author Jose Rubin
@@ -26,44 +35,42 @@ public boolean stop;
 
     @Override
     public void run() {
-//        while (!stop) {
-//			try{
+		while (!stop) {
+			try{
 				
-//				mutexCountdown.acquire();
-//				estadoPm = "Esperando contador";
+				int MinutosDia = MinutosEnUnDia;
+				mutexCountdown.acquire();
+				estadoDirector = "Esperando contador";			
+				Interface.Director2.setText(estadoDirector);
+				if(countdownProductoraK>0){
+					estadoPm = "Sprints Reviews";
+					Interface.Director2.setText(estadoDirector);
+					mutexCountdown.release();
+					PeriodoTrabajo = (int) (Math.random() * (1080+60-720)) + 720;
+					MinutosDia = MinutosDia-PeriodoTrabajo;
+					while(MinutosDia>90){
+						int n = (int) (Math.random() * 90+1-30)+30;
+						MinutosDia = MinutosDia - n;
+						if (estadoPm.equalsIgnoreCase("Ricky y Morty")){
+							descuentoPM = descuentoPM+1;
+							counterPM=counterPM+1;
+							int salario = (30 - countdownProductoraK)* 7;
+							Interface.SalarioPm2.setText(Integer.toString(salario - descuentoPM));
+							Interface.RegistroPM2.setText(Integer.toString(counterPM));
+						}
+						Thread.sleep(tiempoDia*n);
+					}
+				} else{
+					mutexCountdown.release();
+					numTotalCapsKev=0;
+				}
 				
-//				Interface.Pm1.setText(estadoPm);
-//				if(countdownProductoraK>0){
-//					estadoPm = "Sprints Reviews";
-//					Interface.Pm1.setText(estadoPm);
-
-//					mutexCountdown.release();
-//					PeriodoTrabajo = (int) (Math.random() * (1080+60-720)) + 720;
-//					MinutosEnUnDia = MinutosEnUnDia-PeriodoTrabajo;
-//					while(MinutosEnUnDia>90){
-//						int n = (int) (Math.random() * 90+1-30)+30;
-//						MinutosEnUnDia = MinutosEnUnDia - n;
-
-//						if (estadoPm.equalsIgnoreCase("Ricky y Morty")){
-//							descuentoPM = descuentoPM+1;
-//							counterPM=counterPM++;
-//							Interface.RegistroPM1.setText(counterPM);
-//							Interface.Pm1.setText(estadoPm);
-//						}
-//						Thread.sleep(tiempoDia);
-//					}
-//				} else{
-//					mutexCountdown.release();
-//					numCaps=0;
-//				}
-//				
-//				estadoPm="Casa";
-//				Interface.Pm2.setText(estadoPm);
-//				Thread.sleep(tiempoDia*(MinutosEnUnDia-PeriodoTrabajo));
-//				
-//			}catch (InterruptedException ex) {
-//				Logger.getLogger(DirectorJ.class.getName()).log(Level.SEVERE, null, ex);
-//			}
-//		}
+				estadoDirector="Casa";
+				Interface.Director2.setText(estadoDirector);
+				Thread.sleep(tiempoDia*(MinutosEnUnDia-PeriodoTrabajo));
+				
+			}catch (Exception e) {
+			}
+		}
 	}
 }

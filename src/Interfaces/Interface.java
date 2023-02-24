@@ -191,8 +191,9 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         PanelPlantaKev.add(ProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 50, 40));
+
         ProducersInicio2.setEditable(false);
-        ProducersInicio2.setText(Integer.toString(numProducerClosureKev));
+        ProducersInicio2.setText(Integer.toString(numProducerStartKev));
         ProducersInicio2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersInicio2ActionPerformed(evt);
@@ -201,7 +202,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.add(ProducersInicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 50, 40));
 
         ProducersClosers2.setEditable(false);
-        ProducersClosers2.setText("1");
+        ProducersClosers2.setText(Integer.toString(numProducerClosureKev));
         ProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersClosers2ActionPerformed(evt);
@@ -585,6 +586,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 50, 40));
+
         AssemblersJ1.setEditable(false);
         AssemblersJ1.setText(Integer.toString(numAssemblersJose));
         AssemblersJ1.addActionListener(new java.awt.event.ActionListener() {
@@ -620,6 +622,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 50, 40));
+
         MinusProducersClosers.setText("-");
         MinusProducersClosers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

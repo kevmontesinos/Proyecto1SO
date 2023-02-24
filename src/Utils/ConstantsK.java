@@ -77,6 +77,7 @@ public class ConstantsK {
     
     //Estado de PM
     public static String estadoPm;
+    public static String estadoDirector;
     
     //Mutex del countdown
     public static Semaphore mutexCountdown = new Semaphore(1);
@@ -98,5 +99,6 @@ public class ConstantsK {
     public static int promedioCapsGananciasKev;
     public static int numTotalCapsKev;
     public static int promedioPerdidaJefesKev;
-
+	public static int counterPM;
+	public static int descuentoPM;
 }

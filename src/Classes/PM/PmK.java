@@ -10,19 +10,17 @@ package Classes.PM;
  * @author Kevin
  */
 import Interfaces.Interface;
-import static Utils.ConstantsK.numProducerIntroKev;
-import static Utils.ConstantsK.numProducerCreditsKev;
-import static Utils.ConstantsK.numProducerStartKev;
-import static Utils.ConstantsK.numProducerClosureKev;
-import static Utils.ConstantsK.numProducerPTKev;
-import static Utils.ConstantsK.numAssemblerKev;
-
 import static Utils.ConstantsK.countdownProductoraK;
-import static Utils.ConstantsK.mutexCountdown;
-import static Utils.ConstantsK.tiempoDia;
-import static Utils.ConstantsK.numCaps;
 import static Utils.ConstantsK.estadoPm;
-
+import static Utils.ConstantsK.mutexCountdown;
+import static Utils.ConstantsK.numAssemblerKev;
+import static Utils.ConstantsK.numCaps;
+import static Utils.ConstantsK.numProducerClosureKev;
+import static Utils.ConstantsK.numProducerCreditsKev;
+import static Utils.ConstantsK.numProducerIntroKev;
+import static Utils.ConstantsK.numProducerPTKev;
+import static Utils.ConstantsK.numProducerStartKev;
+import static Utils.ConstantsK.tiempoDia;
 import Utils.InterfaceFunctionsK;
 import Utils.WriteFile;
 
@@ -73,11 +71,12 @@ public class PmK extends Thread {
                     mutexCountdown.release();
 
                     for (int i = 0; i < 29; i++) {
+						System.out.println("suuuu");
                         estadoPm = "Ricky y Morty";
-                        Interface.RegistroPM2.setText(estadoPm);
+                        Interface.Pm4.setText(estadoPm);
                         Thread.sleep(tiempoDia * 1440 / 23); //intervalo de 23 minutos
                         estadoPm = "Sprints Reviews";
-                        Interface.RegistroPM2.setText(estadoPm);
+                        Interface.Pm4.setText(estadoPm);
                         Thread.sleep(tiempoDia * 1440 / 23);
 
                     }

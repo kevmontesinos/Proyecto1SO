@@ -27,7 +27,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
 		datum.getData();
-        writeNewData.writeData();
+//        writeNewData.writeData();
 
 		Interface.setVisible(true);
     }

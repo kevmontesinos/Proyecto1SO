@@ -6,6 +6,7 @@
 package Classes.Assemblers;
 
 import Interfaces.Interface;
+import static Utils.ConstantsK.numCaps;
 
 /**
  *
@@ -18,7 +19,7 @@ public class AssemblerK extends Thread {
     public int tiempoDia = 1; //esto tiene que venir luego del json
 
     public boolean enableToAssemble() {
-        if (Utils.ConstantsK.driveIntroK > 0 && Utils.ConstantsK.driveCreditsK > 0 && Utils.ConstantsK.driveStartK > 0 && Utils.ConstantsK.driveClosureK > 0 && Utils.ConstantsK.drivePTK > 0) {
+        if (Utils.ConstantsK.driveIntroK > 0 && Utils.ConstantsK.driveCreditsK > 0 && Utils.ConstantsK.driveStartK > 0 && Utils.ConstantsK.driveClosureK > 1 && Utils.ConstantsK.drivePTK > 0) {
             return true;
         }
         return false;
@@ -39,8 +40,7 @@ public class AssemblerK extends Thread {
                 if (this.enableToAssemble()) {
 
                     //Para sacar 1 intro
-                    Utils.ConstantsK.mutexIntroK.acquire();
-                    Utils.ConstantsK.semIntroK.acquire();
+					Utils.ConstantsK.mutexIntroK.acquire();
                     Utils.ConstantsK.driveIntroK--;
                     Interface.DriveIntro2.setText(Integer.toString(Utils.ConstantsK.driveIntroK));
                     Utils.ConstantsK.semIntroK.release();
@@ -48,7 +48,6 @@ public class AssemblerK extends Thread {
 
                     //Para sacar 1 credit
                     Utils.ConstantsK.mutexCreditsK.acquire();
-                    Utils.ConstantsK.semCreditsK.acquire();
                     Utils.ConstantsK.driveCreditsK--;
                     Interface.DriveCredits2.setText(Integer.toString(Utils.ConstantsK.driveCreditsK));
                     Utils.ConstantsK.semCreditsK.release();
@@ -56,27 +55,30 @@ public class AssemblerK extends Thread {
 
                     //Para sacar 1 start
                     Utils.ConstantsK.mutexStartK.acquire();
-                    Utils.ConstantsK.semStartK.acquire();
                     Utils.ConstantsK.driveStartK--;
                     Interface.DriveInicio2.setText(Integer.toString(Utils.ConstantsK.driveStartK));
                     Utils.ConstantsK.semStartK.release();
                     Utils.ConstantsK.mutexStartK.release();
+					
+					if(numCaps % 5 == 0 && numCaps>0){
 
+						//Para sacar 1 plot twist
+						
+						Utils.ConstantsK.mutexPTK.acquire();
+						Utils.ConstantsK.drivePTK--;
+						Interface.DrivePt2.setText(Integer.toString(Utils.ConstantsK.drivePTK));
+						Utils.ConstantsK.semPTK.release();
+						Utils.ConstantsK.mutexPTK.release();
+					}else{
+						Utils.ConstantsK.mutexClosureK.acquire();
+						Utils.ConstantsK.driveClosureK--;
+						Utils.ConstantsK.driveClosureK--;
+						Interface.DriveCierre2.setText(Integer.toString(Utils.ConstantsK.driveClosureK));
+						Utils.ConstantsK.semClosureK.release();
+						Utils.ConstantsK.mutexClosureK.release();
+					}
                     //Para sacar 1 closure
-                    Utils.ConstantsK.mutexClosureK.acquire();
-                    Utils.ConstantsK.semClosureK.acquire();
-                    Utils.ConstantsK.driveClosureK--;
-                    Interface.DriveCierre2.setText(Integer.toString(Utils.ConstantsK.driveClosureK));
-                    Utils.ConstantsK.semClosureK.release();
-                    Utils.ConstantsK.mutexClosureK.release();
 
-                    //Para sacar 1 plot twist
-                    Utils.ConstantsK.mutexPTK.acquire();
-                    Utils.ConstantsK.semPTK.acquire();
-                    Utils.ConstantsK.drivePTK--;
-                    Interface.DrivePt2.setText(Integer.toString(Utils.ConstantsK.drivePTK));
-                    Utils.ConstantsK.semPTK.release();
-                    Utils.ConstantsK.mutexPTK.release();
 
                     //Se incrementa el número de capitulos producidos
                     Utils.ConstantsK.numCaps++;
@@ -84,7 +86,6 @@ public class AssemblerK extends Thread {
 
                     //Se libera
                     Utils.ConstantsK.mutexAssemblerK.release();
-
                     Thread.sleep(tiempoDia * 2000); //2 días por capítulo
                 } else {
                     //Si no hay nada qué producir, se libera

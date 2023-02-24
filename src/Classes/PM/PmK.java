@@ -55,7 +55,7 @@ public class PmK extends Thread {
                 if (countdownProductoraK > 0) {
                     mutexCountdown.acquire();
 
-                    Thread.sleep(tiempoDia * 3 / 8);
+                    Thread.sleep(tiempoDia * 375);
 
                     countdownProductoraK--;
                     diaActual++;
@@ -71,13 +71,12 @@ public class PmK extends Thread {
                     mutexCountdown.release();
 
                     for (int i = 0; i < 29; i++) {
-						System.out.println("suuuu");
                         estadoPm = "Ricky y Morty";
                         Interface.Pm4.setText(estadoPm);
-                        Thread.sleep(tiempoDia * 1440 / 23); //intervalo de 23 minutos
+                        Thread.sleep(tiempoDia * 15,9); //intervalo de 23 minutos
                         estadoPm = "Sprints Reviews";
                         Interface.Pm4.setText(estadoPm);
-                        Thread.sleep(tiempoDia * 1440 / 23);
+                        Thread.sleep(tiempoDia * 15,9);
 
                     }
                 } else {

@@ -209,6 +209,7 @@ public class GetDatos {
                         totalCapsGan1 = totalCapsGan1 + Integer.valueOf((String)capsGanancia1.get(i));
                     }
                     promedioCapsGananciasJose = totalCapsGan1/capsGanancia1.size();
+			
                     break;
                 case "CapsGanancia2":
                     capsGanancia2 = (ArrayList) map2.get(key2);

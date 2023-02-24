@@ -133,8 +133,6 @@ public class InterfaceFunctions {
         directorJ= new DirectorJ();
         directorJ.start();
 
-        System.out.println("HOLA");
-
     }
 
      public static void stopRun() {

@@ -6,6 +6,7 @@
 package Classes.Producers;
 
 import Interfaces.Interface;
+import static Utils.ConstantsK.tiempoDia;
 
 /**
  *
@@ -15,8 +16,6 @@ public class ProducersCreditsK extends Thread {
 
     public int id;
     public boolean stop;
-
-    public int tiempoDia = 1; //esto tiene que venir luego del json
 
     public ProducersCreditsK(int id) {
         this.stop = false;

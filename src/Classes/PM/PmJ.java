@@ -55,7 +55,7 @@ public class PmJ extends Thread {
                 if (countdownProductoraJ > 0) {
                     mutexCountdownJ.acquire();
 
-                    Thread.sleep(tiempoDia * 3 / 8);
+                    Thread.sleep(tiempoDia * 250);
 
                     countdownProductoraJ--;
                     diaActual++;
@@ -74,10 +74,10 @@ public class PmJ extends Thread {
                     for (int i = 0; i < 29; i++) {
                         estadoPm = "Ricky y Morty";
                         Interface.Pm3.setText(estadoPm);
-                        Thread.sleep(tiempoDia * 1440 / 23); //intervalo de 23 minutos
+                        Thread.sleep(tiempoDia * 13,8); //intervalo de 23 minutos
                         estadoPm = "Sprints Reviews";
                         Interface.Pm3.setText(estadoPm);
-                        Thread.sleep(tiempoDia * 1440 / 23);
+                        Thread.sleep(tiempoDia *13,8);
 
                     }
                 } else {

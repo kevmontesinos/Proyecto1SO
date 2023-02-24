@@ -9,6 +9,6 @@ package Classes.Directors;
  *
  * @author Jose Rubin
  */
-public class DirectorJ {
+public class DirectorJ extends Thread {
     
 }

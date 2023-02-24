@@ -190,7 +190,7 @@ public class InterfaceFunctions {
     public static void minusProducersCred() {
         if (numProducerCreditsJose > 1) {
             numProducerCreditsJose--;
-            Interface.ProducersCred2.setText(Integer.toString(numProducerCreditsJose));
+            Interface.ProducersCred.setText(Integer.toString(numProducerCreditsJose));
             if (countdownProductoraJ < 30) {
                 stackProducersCreditsJ.peek().stopRun();
                 stackProducersCreditsJ.pop();
@@ -203,7 +203,7 @@ public class InterfaceFunctions {
     public static void minusProducersStart() {
         if (numProducerStartJose > 1) {
             numProducerStartJose--;
-            Interface.ProducersInicio2.setText(Integer.toString(numProducerStartJose));
+            Interface.ProducersInicio.setText(Integer.toString(numProducerStartJose));
             if (countdownProductoraJ < 30) {
                 stackProducersStartJ.peek().stopRun();
                 stackProducersStartJ.pop();
@@ -216,7 +216,7 @@ public class InterfaceFunctions {
     public static void minusProducersClosers() {
         if (numProducerClosureJose > 1) {
             numProducerClosureJose--;
-            Interface.ProducersClosers2.setText(Integer.toString(numProducerClosureJose));
+            Interface.ProducersClosers.setText(Integer.toString(numProducerClosureJose));
             if (countdownProductoraJ < 30) {
                 stackProducersClosureJ.peek().stopRun();
                 stackProducersClosureJ.pop();
@@ -229,7 +229,7 @@ public class InterfaceFunctions {
     public static void minusProducersPT() {
         if (numProducerPTJose > 1) {
             numProducerPTJose--;
-            Interface.ProducersPT2.setText(Integer.toString(numProducerPTJose));
+            Interface.ProducersPT.setText(Integer.toString(numProducerPTJose));
             if (countdownProductoraJ < 30) {
                 stackProducerPTJ.peek().stopRun();
                 stackProducerPTJ.pop();
@@ -242,7 +242,7 @@ public class InterfaceFunctions {
     public static void minusAssemblers() {
         if (numAssemblersJose > 1) {
             numAssemblersJose--;
-            Interface.AssemblersJ2.setText(Integer.toString(numAssemblersJose));
+            Interface.AssemblersJ1.setText(Integer.toString(numAssemblersJose));
             if (countdownProductoraJ < 30) {
                 stackAssemblerJ.peek().stopRun();
                 stackAssemblerJ.pop();
@@ -261,7 +261,6 @@ public class InterfaceFunctions {
 
             if (countdownProductoraJ < 30) {
                 prodIntro = new ProducersIntroJ(numProducerIntroJose);
-                prodIntro.start();
                 stackProducersIntroJ.push(prodIntro);
             }
         } else {
@@ -278,7 +277,6 @@ public class InterfaceFunctions {
 
             if (countdownProductoraJ < 30) {
                 prodCredits = new ProducersCreditsJ(numProducerCreditsJose);
-                prodCredits.start();
                 stackProducersCreditsJ.push(prodCredits);
             }
         } else {
@@ -295,7 +293,6 @@ public class InterfaceFunctions {
 
             if (countdownProductoraJ < 30) {
                 prodStart = new ProducersStartJ(numProducerStartJose);
-                prodStart.start();
                 stackProducersStartJ.push(prodStart);
             }
         } else {
@@ -312,7 +309,6 @@ public class InterfaceFunctions {
 
             if (countdownProductoraJ < 30) {
                 prodClosure = new ProducersClosureJ(numProducerClosureJose);
-                prodClosure.start();
                 stackProducersClosureJ.push(prodClosure);
             }
         } else {
@@ -329,7 +325,6 @@ public class InterfaceFunctions {
 
             if (countdownProductoraJ < 30) {
                 prodPT = new ProducerPTJ(numProducerPTJose);
-                prodPT.start();
                 stackProducerPTJ.push(prodPT);
             }
         } else {
@@ -347,7 +342,6 @@ public class InterfaceFunctions {
 
             if (countdownProductoraJ < 30) {
                 assembler = new AssemblerJ(numAssemblersJose);
-                assembler.start();
                 stackAssemblerJ.push(assembler);
             }
         } else {

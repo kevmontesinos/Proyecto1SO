@@ -30,6 +30,9 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         initComponents();
     }
+	
+	public static Utils.GetDatos datum;
+	public static Dashboard InterfazDash= new Dashboard();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1030,6 +1033,9 @@ public class Interface extends javax.swing.JFrame {
 
     private void ShowDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowDashboardActionPerformed
         // TODO add your handling code here:
+
+		datum.getDataforDashboard();
+        InterfazDash.setVisible(true);
     }//GEN-LAST:event_ShowDashboardActionPerformed
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed

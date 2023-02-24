@@ -55,6 +55,8 @@ public class Constants {
     public static Semaphore mutexStartJ = new Semaphore(1);
     public static Semaphore mutexClosureJ = new Semaphore(1);
     public static Semaphore mutexPTJ = new Semaphore(1);
+    public static Semaphore mutexCountdownJ = new Semaphore(1);
+
 
 	//Cantidad de GB en drives de los productores
     public static volatile int driveIntroJ = 0;
@@ -71,7 +73,8 @@ public class Constants {
     
     //Instancia PM
     public static PmJ pmJ;
-    
+	public static String estadoPm="" ;
+	
     //Project Manager
     public static volatile int countdownProductoraJ;
     
@@ -93,6 +96,7 @@ public class Constants {
     public static int numTotalCapsJose;
     public static int promedioPerdidaPMJose;
     public static int promedioNumTotalCaps1;
-
+	public static int descuentoPM=0;
+	public static int counterPM=0;
 	
 }

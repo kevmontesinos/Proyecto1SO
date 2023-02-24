@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Jose Rubin
@@ -33,6 +35,7 @@ public class ProducerPTJ extends Thread {
                 Utils.Constants.mutexPTJ.acquire();
 
                 Utils.Constants.drivePTJ++;
+                Interface.DrivePT.setText(Integer.toString(Utils.Constants.drivePTJ));
 
                 Utils.Constants.mutexPTJ.release();
 

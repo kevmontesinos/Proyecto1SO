@@ -5,6 +5,8 @@
  */
 package Classes.Producers;
 
+import Interfaces.Interface;
+
 /**
  *
  * @author Jose Rubin
@@ -33,6 +35,7 @@ public class ProducersIntroJ extends Thread {
                 Utils.Constants.mutexIntroJ.acquire();
 
                 Utils.Constants.driveIntroJ++;
+                Interface.DriveIntro.setText(Integer.toString(Utils.Constants.driveIntroJ));
 
                 Utils.Constants.mutexIntroJ.release();
                 

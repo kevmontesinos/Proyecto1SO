@@ -22,6 +22,10 @@ public class ProducersStartJ extends Thread {
 
     }
 
+	public void stopRun() {
+        this.stop = true;
+    }
+
     @Override
     public void run() {
         while (!stop) {

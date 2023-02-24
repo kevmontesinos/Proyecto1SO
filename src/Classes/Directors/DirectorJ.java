@@ -11,4 +11,20 @@ package Classes.Directors;
  */
 public class DirectorJ extends Thread {
     
+public boolean stop;
+
+    public DirectorJ() {
+        this.stop = false;
+    }
+
+    @Override
+    public void run() {
+        while (!stop) {
+
+        }
+    }
+
+    public void stopRun() {
+        this.stop = true;
+    }
 }

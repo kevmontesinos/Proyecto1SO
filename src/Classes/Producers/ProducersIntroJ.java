@@ -21,6 +21,9 @@ public class ProducersIntroJ extends Thread {
         this.id = id;
 
     }
+	public void stopRun() {
+        this.stop = true;
+    }
 
     @Override
     public void run() {

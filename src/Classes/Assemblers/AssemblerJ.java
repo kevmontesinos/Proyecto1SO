@@ -88,5 +88,8 @@ public class AssemblerJ extends Thread {
 
         }
     }
+	public void stopRun() {
+        this.stop = true;
+    }
     
 }

@@ -17,6 +17,7 @@ public class Main {
 
 	public static GetDatos datum = new GetDatos();
 	public static WriteFile writeNewData = new WriteFile();
+	
 
     /**
      * @param args the command line arguments

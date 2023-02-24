@@ -6,13 +6,18 @@
 package Classes;
 
 import Interfaces.Interface;
+import Utils.GetDatos;
+import Utils.WriteFile;
 
 /**
  *
  * @author Kevin
  */
 public class Main {
-	
+
+	public static GetDatos datum = new GetDatos();
+	public static WriteFile writeNewData = new WriteFile();
+
     /**
      * @param args the command line arguments
      */
@@ -21,6 +26,9 @@ public class Main {
 
     public static void main(String[] args) {
         // TODO code application logic here
+		datum.getData();
+        writeNewData.writeData();
+
 		Interface.setVisible(true);
     }
     

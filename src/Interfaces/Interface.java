@@ -5,6 +5,19 @@
  */
 package Interfaces;
 
+import static Utils.Constants.numAssemblersJose;
+import static Utils.Constants.numProducerClosureJose;
+import static Utils.Constants.numProducerCreditsJose;
+import static Utils.Constants.numProducerIntroJose;
+import static Utils.Constants.numProducerPTJose;
+import static Utils.Constants.numProducerStartJose;
+import static Utils.ConstantsK.numAssemblerKev;
+import static Utils.ConstantsK.numProducerClosureKev;
+import static Utils.ConstantsK.numProducerCreditsKev;
+import static Utils.ConstantsK.numProducerIntroKev;
+import static Utils.ConstantsK.numProducerPTKev;
+import static Utils.ConstantsK.numProducerStartKev;
+
 /**
  *
  * @author Jose Rubin
@@ -16,8 +29,10 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
-
     }
+	
+	public static Utils.GetDatos datum;
+	public static Dashboard InterfazDash= new Dashboard();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -143,7 +158,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         AssemblersJ2.setEditable(false);
-        AssemblersJ2.setText("1");
+        AssemblersJ2.setText(Integer.toString(numAssemblerKev));
         AssemblersJ2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AssemblersJ2ActionPerformed(evt);
@@ -152,7 +167,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.add(AssemblersJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 50, 40));
 
         ProducersIntro2.setEditable(false);
-        ProducersIntro2.setText("1");
+        ProducersIntro2.setText(Integer.toString(numProducerIntroKev));
         ProducersIntro2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersIntro2ActionPerformed(evt);
@@ -161,7 +176,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.add(ProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 50, 40));
 
         ProducersCred2.setEditable(false);
-        ProducersCred2.setText("1");
+        ProducersCred2.setText(Integer.toString(numProducerCreditsKev));
         ProducersCred2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersCred2ActionPerformed(evt);
@@ -170,7 +185,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.add(ProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 50, 40));
 
         ProducersClosers2.setEditable(false);
-        ProducersClosers2.setText("1");
+        ProducersClosers2.setText(Integer.toString(numProducerStartKev));
         ProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersClosers2ActionPerformed(evt);
@@ -179,7 +194,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.add(ProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 50, 40));
 
         ProducersInicio2.setEditable(false);
-        ProducersInicio2.setText("1");
+        ProducersInicio2.setText(Integer.toString(numProducerClosureKev));
         ProducersInicio2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersInicio2ActionPerformed(evt);
@@ -390,7 +405,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaKev.add(MinusProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 50, 40));
 
         ProducersPT2.setEditable(false);
-        ProducersPT2.setText("1");
+        ProducersPT2.setText(Integer.toString(numProducerPTKev));
         ProducersPT2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersPT2ActionPerformed(evt);
@@ -523,16 +538,16 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.add(countdownJose, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 520, 30, 40));
 
         ProducersInicio.setEditable(false);
-        ProducersInicio.setText("1");
+        ProducersInicio.setText(Integer.toString(numProducerStartJose));
         ProducersInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersInicioActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 50, 40));
+        PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 50, 40));
 
         AssemblersJ1.setEditable(false);
-        AssemblersJ1.setText("1");
+        AssemblersJ1.setText(Integer.toString(numAssemblersJose));
         AssemblersJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AssemblersJ1ActionPerformed(evt);
@@ -541,7 +556,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.add(AssemblersJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 50, 40));
 
         ProducersIntro.setEditable(false);
-        ProducersIntro.setText("1");
+        ProducersIntro.setText(Integer.toString(numProducerIntroJose));
         ProducersIntro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersIntroActionPerformed(evt);
@@ -550,7 +565,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.add(ProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 50, 40));
 
         ProducersCred.setEditable(false);
-        ProducersCred.setText("1");
+        ProducersCred.setText(Integer.toString(numProducerCreditsJose));
         ProducersCred.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersCredActionPerformed(evt);
@@ -559,13 +574,13 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.add(ProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 50, 40));
 
         ProducersClosers.setEditable(false);
-        ProducersClosers.setText("1");
+        ProducersClosers.setText(Integer.toString(numProducerClosureJose));
         ProducersClosers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersClosersActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 50, 40));
+        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 50, 40));
 
         MinusProducersClosers.setText("-");
         MinusProducersClosers.addActionListener(new java.awt.event.ActionListener() {
@@ -790,7 +805,7 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.add(MinusProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 50, 40));
 
         ProducersPT.setEditable(false);
-        ProducersPT.setText("1");
+        ProducersPT.setText(Integer.toString(numProducerPTJose));
         ProducersPT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProducersPTActionPerformed(evt);
@@ -910,7 +925,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_ProducersClosersActionPerformed
 
     private void MinusProducersClosersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosersActionPerformed
-
+		Utils.InterfaceFunctions.minusProducersClosers();
     }//GEN-LAST:event_MinusProducersClosersActionPerformed
 
     private void AssemblersJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssemblersJ2ActionPerformed
@@ -935,43 +950,43 @@ public class Interface extends javax.swing.JFrame {
 
     private void SumAssemblersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumAssemblersActionPerformed
         // TODO add your handling code here:
-        int n = 0;
-        AssemblersJ1.setText(Integer.toString(n++));
-        Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
-        System.out.println(Utils.Constants.numAssemblersJose);
-
+		Utils.InterfaceFunctions.sumAssemblers();
     }//GEN-LAST:event_SumAssemblersActionPerformed
 
     private void MinusAssemblerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusAssemblerActionPerformed
-
+		Utils.InterfaceFunctions.minusAssemblers();
     }//GEN-LAST:event_MinusAssemblerActionPerformed
 
     private void MinusProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersIntroActionPerformed
-
+        Utils.InterfaceFunctions.minusProducersIntro();
     }//GEN-LAST:event_MinusProducersIntroActionPerformed
 
     private void SumProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersIntroActionPerformed
         // TODO add your handling code here:
+		Utils.InterfaceFunctions.sumProducersIntro();
     }//GEN-LAST:event_SumProducersIntroActionPerformed
 
     private void SumProducersCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersCredActionPerformed
         // TODO add your handling code here:
+		Utils.InterfaceFunctions.sumProducersCred();
     }//GEN-LAST:event_SumProducersCredActionPerformed
 
     private void MinusProducersCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersCredActionPerformed
-
+		Utils.InterfaceFunctions.minusProducersCred();
     }//GEN-LAST:event_MinusProducersCredActionPerformed
 
     private void SumProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersStartActionPerformed
         // TODO add your handling code here:
+		Utils.InterfaceFunctions.sumProducersStart();
     }//GEN-LAST:event_SumProducersStartActionPerformed
 
     private void SumProducersClosersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosersActionPerformed
         // TODO add your handling code here:
+		Utils.InterfaceFunctions.sumProducersClosers();
     }//GEN-LAST:event_SumProducersClosersActionPerformed
 
     private void MinusProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersStartActionPerformed
-
+		Utils.InterfaceFunctions.minusProducersStart();
     }//GEN-LAST:event_MinusProducersStartActionPerformed
 
     private void SumProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosers2ActionPerformed
@@ -1018,22 +1033,20 @@ public class Interface extends javax.swing.JFrame {
 
     private void ShowDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowDashboardActionPerformed
         // TODO add your handling code here:
+
+		datum.getDataforDashboard();
+        InterfazDash.setVisible(true);
     }//GEN-LAST:event_ShowDashboardActionPerformed
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         // TODO add your handling code here:
-        //Seteo el numero de cada productor y ensamblador gracias a lo que coloquen en el textfield
-        //Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
-        //Utils.Constants.numProducerIntroJose = Integer.parseInt(ProducersIntro.getText());
-        //Utils.Constants.numProducerStartJose = Integer.parseInt(ProducersInicio.getText());
-        //Utils.Constants.numProducerClosureJose = Integer.parseInt(ProducersClosers.getText());
-        //Utils.Constants.numProducerCreditsJose = Integer.parseInt(ProducersCred.getText());
-        //Utils.Constants.numProducerPTJose = Integer.parseInt(ProducersPT.getText());
         Utils.InterfaceFunctionsK.startRun();
+        Utils.InterfaceFunctions.startRun();
     }//GEN-LAST:event_StartButtonActionPerformed
 
     private void StopButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopButtonActionPerformed
         Utils.InterfaceFunctionsK.stopRun();
+        Utils.InterfaceFunctions.stopRun();
     }//GEN-LAST:event_StopButtonActionPerformed
 
     private void DriveCreditsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DriveCreditsActionPerformed
@@ -1081,7 +1094,8 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_countdownJoseActionPerformed
 
     private void MinusProducersPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersPTActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:		
+		Utils.InterfaceFunctions.minusProducersPT();
     }//GEN-LAST:event_MinusProducersPTActionPerformed
 
     private void ProducersPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersPTActionPerformed
@@ -1090,6 +1104,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void SumProducersPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersPTActionPerformed
         // TODO add your handling code here:
+		Utils.InterfaceFunctions.sumProducersPT();
     }//GEN-LAST:event_SumProducersPTActionPerformed
 
     private void MinusProducersPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersPT2ActionPerformed

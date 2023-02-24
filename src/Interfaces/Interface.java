@@ -17,6 +17,7 @@ import static Utils.ConstantsK.numProducerCreditsKev;
 import static Utils.ConstantsK.numProducerIntroKev;
 import static Utils.ConstantsK.numProducerPTKev;
 import static Utils.ConstantsK.numProducerStartKev;
+import Utils.GetDatos;
 
 /**
  *
@@ -27,13 +28,12 @@ public class Interface extends javax.swing.JFrame {
     /**
      * Creates new form Interface
      */
+    public static Dashboard InterfazDash= new Dashboard();
+	public static GetDatos datum = new GetDatos();
     public Interface() {
         initComponents();
     }
 	
-	public static Utils.GetDatos datum;
-	public static Dashboard InterfazDash= new Dashboard();
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -9,6 +9,8 @@ import static Interfaces.Interface.Ganancia1;
 import static Interfaces.Interface.Ganancia2;
 import static Interfaces.Interface.Gastos1;
 import static Interfaces.Interface.Gastos2;
+import static Interfaces.Interface.RegistroPM1;
+import static Interfaces.Interface.RegistroPM2;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -33,12 +35,10 @@ public class WriteFile {
     ArrayList newdataGastos2 = new ArrayList();
     ArrayList newdataGanancia1 = new ArrayList();
     ArrayList newdataGanancia2 = new ArrayList();
-    // ArrayList newtelefGanancia1 = new ArrayList();
-    // ArrayList newtelefGanancia2 = new ArrayList();
     ArrayList newcapsTotal1 = new ArrayList();
     ArrayList newcapsTotal2 = new ArrayList();
-    // ArrayList newperdidaJefe1 = new ArrayList();
-    // ArrayList newperdidaJefe2 = new ArrayList();
+     ArrayList newperdidaPM1 = new ArrayList();
+     ArrayList newperdidaPM2 = new ArrayList();
 
     Path currentRelativePath = Paths.get("");
     String s = currentRelativePath.toAbsolutePath().toString();
@@ -80,16 +80,16 @@ public class WriteFile {
 //                    newcapsTotal2.add(CapsTotal2.getText());
 //                    obj.put(key2, newcapsTotal2);
 //                    break;
-                // case "perdidaJefe1":
-                //     newperdidaJefe1 = (JSONArray) map2.get(key2);
-                //     newperdidaJefe1.add(JefePerdido1.getText());
-                //     obj.put(key2, newperdidaJefe1);
-                //     break;
-                // case "perdidaJefe2":
-                //     newperdidaJefe2 = (JSONArray) map2.get(key2);
-                //     newperdidaJefe2.add(JefePerdido2.getText());
-                //     obj.put(key2, newperdidaJefe2);
-                //     break;
+                 case "perdidaPM1":
+                     newperdidaPM1 = (JSONArray) map2.get(key2);
+                     newperdidaPM1.add(RegistroPM1.getText());
+                     obj.put(key2, newperdidaPM1);
+                     break;
+                 case "perdidaPM2":
+                     newperdidaPM2 = (JSONArray) map2.get(key2);
+                     newperdidaPM2.add(RegistroPM2.getText());
+                     obj.put(key2, newperdidaPM2);
+                     break;
             }
         newJson.add(obj);
         

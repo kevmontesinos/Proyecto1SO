@@ -97,7 +97,9 @@ public class Constants {
     public static int numTotalCapsJose;
     public static int promedioPerdidaPMJose;
     public static int promedioNumTotalCaps1;
+    public static int promedioNumTotalCaps2;
 	public static int descuentoPM=0;
 	public static int counterPM=0;
+	public static int promedioCapsGananciasKev;
 	
 }

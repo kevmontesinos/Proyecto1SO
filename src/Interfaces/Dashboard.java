@@ -5,6 +5,22 @@
  */
 package Interfaces;
 
+import static Utils.Constants.numCapsJ;
+import static Utils.Constants.promedioCapsGananciasJose;
+import static Utils.Constants.promedioCapsGananciasKev;
+import static Utils.Constants.promedioGananciasJose;
+import static Utils.Constants.promedioGastosJose;
+import static Utils.ConstantsK.numCaps;
+import static Utils.ConstantsK.promedioGananciasKev;
+import static Utils.ConstantsK.promedioGastosKev;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+
 /**
  *
  * @author Jose Rubin
@@ -27,21 +43,189 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel4 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        generar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        generar.setText("Generar");
+        generar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(506, 506, 506)
+                        .addComponent(generar)))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(generar))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarActionPerformed
+        // TODO add your handling code here:
+        //Telefonos vendidos
+        int capitulosProducidosPlanta1=numCaps;
+        int capitulosProducidosPlanta2=numCapsJ;
+
+        DefaultCategoryDataset datos = new DefaultCategoryDataset();
+
+        datos.setValue(capitulosProducidosPlanta1, "Planta 1", "");
+
+        datos.setValue(capitulosProducidosPlanta2, "Planta 2", "");
+
+        JFreeChart grafico_barras = ChartFactory.createBarChart3D(
+            "Capitulos Producidos",
+            "Plantas",
+            "Numero de Capitulos",
+
+            datos,
+            PlotOrientation.VERTICAL,
+            true,
+            true,
+            false
+        );
+
+        ChartPanel panel = new ChartPanel(grafico_barras);
+        panel.setMouseWheelEnabled(true);
+        panel.setPreferredSize(new Dimension(500,300));
+
+        jPanel2.setLayout(new BorderLayout());
+        jPanel2.add(panel,BorderLayout.NORTH);
+
+        pack();
+        repaint();
+
+        //Ganancia telefonos
+        int gananciaTelefonosPlanta1=promedioCapsGananciasJose;
+        int gananciaTelefonosPlanta2=promedioCapsGananciasKev;
+
+        DefaultCategoryDataset datos2 = new DefaultCategoryDataset();
+
+        datos2.setValue(gananciaTelefonosPlanta1, "Planta 1", "");
+
+        datos2.setValue(gananciaTelefonosPlanta2, "Planta 2", "");
+
+        JFreeChart grafico_barras2 = ChartFactory.createBarChart3D(
+            "Ganancia Capitulos",
+            "Plantas",
+            "Dolares",
+            datos2,
+            PlotOrientation.VERTICAL,
+            true,
+            true,
+            false
+        );
+
+        ChartPanel panel2 = new ChartPanel(grafico_barras2);
+        panel2.setMouseWheelEnabled(true);
+        panel2.setPreferredSize(new Dimension(500,300));
+
+        jPanel3.setLayout(new BorderLayout());
+        jPanel3.add(panel2,BorderLayout.NORTH);
+
+        pack();
+        repaint();
+
+        //Gastos Sueldos
+        int gastosSueldosPlanta1 = promedioGastosJose;
+        int gastosSueldosPlanta2= promedioGastosKev;
+
+        DefaultCategoryDataset datos3 = new DefaultCategoryDataset();
+
+        datos3.setValue(gastosSueldosPlanta1, "Planta 1", "");
+
+        datos3.setValue(gastosSueldosPlanta2, "Planta 2", "");
+
+        JFreeChart grafico_barras3 = ChartFactory.createBarChart3D(
+            "Gastos Salarios",
+            "Plantas",
+            "Dolares",
+            datos3,
+            PlotOrientation.VERTICAL,
+            true,
+            true,
+            false
+        );
+
+        ChartPanel panel3 = new ChartPanel(grafico_barras3);
+        panel3.setMouseWheelEnabled(true);
+        panel3.setPreferredSize(new Dimension(500,300));
+
+        jPanel4.setLayout(new BorderLayout());
+        jPanel4.add(panel3,BorderLayout.NORTH);
+
+        pack();
+        repaint();
+
+        //Ganancia Neta
+        int gananciaNetaPlanta1=promedioGananciasJose;
+        int gananciaNetaPlanta2=promedioGananciasKev;
+
+        DefaultCategoryDataset datos4 = new DefaultCategoryDataset();
+
+        datos4.setValue(gananciaNetaPlanta1, "Planta 1", "");
+
+        datos4.setValue(gananciaNetaPlanta2, "Planta 2", "");
+
+        JFreeChart grafico_barras4 = ChartFactory.createBarChart3D(
+            "Ganancia Neta",
+            "Plantas",
+            "Dolares",
+            datos4,
+            PlotOrientation.VERTICAL,
+            true,
+            true,
+            false
+        );
+
+        ChartPanel panel4 = new ChartPanel(grafico_barras4);
+        panel4.setMouseWheelEnabled(true);
+        panel4.setPreferredSize(new Dimension(500,300));
+
+        jPanel5.setLayout(new BorderLayout());
+        jPanel5.add(panel4,BorderLayout.NORTH);
+
+        pack();
+        repaint();
+
+    }//GEN-LAST:event_generarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +263,10 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton generar;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }

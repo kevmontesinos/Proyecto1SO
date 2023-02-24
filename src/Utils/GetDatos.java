@@ -2,11 +2,11 @@ package Utils;
 import static Interfaces.Interface.AssemblersJ1;
 import static Interfaces.Interface.AssemblersJ2;
 import static Interfaces.Interface.ProducersClosers;
-import static Interfaces.Interface.ProducersPT2;
 import static Interfaces.Interface.ProducersClosers2;
 import static Interfaces.Interface.ProducersCred;
 import static Interfaces.Interface.ProducersCred2;
 import static Interfaces.Interface.ProducersInicio;
+import static Interfaces.Interface.ProducersInicio2;
 import static Interfaces.Interface.ProducersIntro;
 import static Interfaces.Interface.ProducersIntro2;
 import static Interfaces.Interface.ProducersPT;
@@ -20,14 +20,18 @@ import static Utils.Constants.driveMaxInicioJose;
 import static Utils.Constants.driveMaxIntroJose;
 import static Utils.Constants.driveMaxPlotTwistJose;
 import static Utils.Constants.numAssemblersJose;
+import static Utils.Constants.numCapsJ;
 import static Utils.Constants.numProducerClosureJose;
 import static Utils.Constants.numProducerCreditsJose;
 import static Utils.Constants.numProducerIntroJose;
 import static Utils.Constants.numProducerPTJose;
 import static Utils.Constants.numProducerStartJose;
+import static Utils.Constants.promedioCapsGananciasJose;
+import static Utils.Constants.promedioCapsGananciasKev;
 import static Utils.Constants.promedioGananciasJose;
 import static Utils.Constants.promedioGastosJose;
 import static Utils.Constants.promedioNumTotalCaps1;
+import static Utils.Constants.promedioNumTotalCaps2;
 import static Utils.Constants.promedioPerdidaPMJose;
 import static Utils.ConstantsK.countdownProductoraK;
 import static Utils.ConstantsK.driveMaxCierreKev;
@@ -36,6 +40,7 @@ import static Utils.ConstantsK.driveMaxInicioKev;
 import static Utils.ConstantsK.driveMaxIntroKev;
 import static Utils.ConstantsK.driveMaxPlotTwistKev;
 import static Utils.ConstantsK.numAssemblerKev;
+import static Utils.ConstantsK.numCaps;
 import static Utils.ConstantsK.numProducerClosureKev;
 import static Utils.ConstantsK.numProducerCreditsKev;
 import static Utils.ConstantsK.numProducerIntroKev;
@@ -48,8 +53,6 @@ import static Utils.WriteFile.txtAction;
 import java.util.ArrayList;
 import java.util.Map;
 import org.json.simple.JSONArray;
-import static Interfaces.Interface.ProducersClosers2;
-import static Interfaces.Interface.ProducersInicio2;
 
 
 /**
@@ -73,10 +76,8 @@ public class GetDatos {
     public static int totalGastosSalario2;
     public static int totalGananciaNeta1;
     public static int totalGananciaNeta2;
-    // public static int totalCapsonosGan1;
-    // public static int totalCapsonosGan2;
-    public static int totalnumCaps1;
-    public static int totalnumCaps2;
+	public static int totalCapsGan1 = 966666;
+	public static int totalCapsGan2 = 653333;
     public static int totalperdidaPM1;
     public static int totalperdidaPM2;
 
@@ -202,34 +203,34 @@ public class GetDatos {
                     }
                     promedioGananciasKev = totalGananciaNeta2/dataGanancia2.size();
                     break;
-//                case "CapsGanancia1":
-//                    capsGanancia1 = (ArrayList) map2.get(key2);
-//                    for (int i = 0; i<capsGanancia1.size(); i++){
-//                        totalCapsGan1 = totalCapsGan1 + Integer.valueOf((String)capsGanancia1.get(i));
-//                    }
-//                    promedioCapsGananciasJose = totalCapsGan1/capsGanancia1.size();
-//                    break;
-//                case "CapsGanancia2":
-//                    capsGanancia2 = (ArrayList) map2.get(key2);
-//                    for (int i = 0; i<capsGanancia2.size(); i++){
-//                        totalCapsGan2 = totalCapsGan2 + Integer.valueOf((String)capsGanancia2.get(i));
-//                    }
-//                    promedioCapsGananciasKev = totalCapsGan2/capsGanancia2.size();
-//                    break;
+                case "CapsGanancia1":
+                    capsGanancia1 = (ArrayList) map2.get(key2);
+                    for (int i = 0; i<capsGanancia1.size(); i++){
+                        totalCapsGan1 = totalCapsGan1 + Integer.valueOf((String)capsGanancia1.get(i));
+                    }
+                    promedioCapsGananciasJose = totalCapsGan1/capsGanancia1.size();
+                    break;
+                case "CapsGanancia2":
+                    capsGanancia2 = (ArrayList) map2.get(key2);
+                    for (int i = 0; i<capsGanancia2.size(); i++){
+                        totalCapsGan2 = totalCapsGan2 + Integer.valueOf((String)capsGanancia2.get(i));
+                    }
+                    promedioCapsGananciasKev = totalCapsGan2/capsGanancia2.size();
+                    break;
                 case "numCapsTotal1":
                     capsTotal1 = (ArrayList) map2.get(key2);
                     for (int i = 0; i<capsTotal1.size(); i++){
-                        totalnumCaps1 = totalnumCaps1 + Integer.valueOf((String)capsTotal1.get(i));
+                        numCapsJ = numCapsJ + Integer.valueOf((String)capsTotal1.get(i));
                     }
-                    promedioNumTotalCaps1 = totalnumCaps1/capsTotal1.size();
+                    promedioNumTotalCaps1 = numCapsJ/capsTotal1.size();
                     break;
-//                case "numCapsTotal2":
-//                    capsTotal2 = (ArrayList) map2.get(key2);
-//                    for (int i = 0; i<capsTotal2.size(); i++){
-//                        totalnumCaps2 = totalnumCaps2 + Integer.valueOf((String)capsTotal2.get(i));
-//                    }
-//                    promedioNumTotalCaps2 = totalnumCaps2/capsTotal2.size();
-//                    break;
+                case "numCapsTotal2":
+                    capsTotal2 = (ArrayList) map2.get(key2);
+                    for (int i = 0; i<capsTotal2.size(); i++){
+                        numCaps = numCaps + Integer.valueOf((String)capsTotal2.get(i));
+                    }
+                    promedioNumTotalCaps2 = numCaps/capsTotal2.size();
+                    break;
                 case "perdidaPM1":
                     perdidaPM1 = (ArrayList) map2.get(key2);
                     for (int i = 0; i<perdidaPM1.size(); i++){

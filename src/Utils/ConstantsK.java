@@ -68,11 +68,18 @@ public class ConstantsK {
     //Mutex para el ensamblador
     public static Semaphore mutexAssemblerK = new Semaphore(1);
     
-    //Instancia PM
-    public static PmK pmK;
     
     //Project Manager
     public static volatile int countdownProductoraK;
+    
+    //Instancia PM
+    public static PmK pmK;
+    
+    //Estado de PM
+    public static String estadoPm;
+    
+    //Mutex del countdown
+    public static Semaphore mutexCountdown = new Semaphore(1);
     
      //Instancia Director
     public static DirectorK directorK;

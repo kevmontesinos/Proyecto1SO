@@ -9,7 +9,6 @@ package Interfaces;
  *
  * @author Jose Rubin
  */
-
 public class Interface extends javax.swing.JFrame {
 
     /**
@@ -17,7 +16,7 @@ public class Interface extends javax.swing.JFrame {
      */
     public Interface() {
         initComponents();
-        
+
     }
 
     /**
@@ -44,7 +43,7 @@ public class Interface extends javax.swing.JFrame {
         MinusProducersCred2 = new javax.swing.JButton();
         SumProducersCred2 = new javax.swing.JButton();
         MinusProducersStart2 = new javax.swing.JButton();
-        SumProducersStart1 = new javax.swing.JButton();
+        SumProducersStart2 = new javax.swing.JButton();
         MinusProducersClosers2 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -64,9 +63,9 @@ public class Interface extends javax.swing.JFrame {
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        MinusProducersClosers3 = new javax.swing.JButton();
-        ProducersClosers4 = new javax.swing.JTextField();
-        SumProducersClosers3 = new javax.swing.JButton();
+        MinusProducersPT2 = new javax.swing.JButton();
+        ProducersPT2 = new javax.swing.JTextField();
+        SumProducersPT2 = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
         countdownKevin = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -120,9 +119,9 @@ public class Interface extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        MinusProducersClosers1 = new javax.swing.JButton();
+        MinusProducersPT = new javax.swing.JButton();
         ProducersPT = new javax.swing.JTextField();
-        SumProducersClosers1 = new javax.swing.JButton();
+        SumProducersPT = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
@@ -252,13 +251,13 @@ public class Interface extends javax.swing.JFrame {
         });
         PanelPlantaKev.add(MinusProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 50, 40));
 
-        SumProducersStart1.setText("+");
-        SumProducersStart1.addActionListener(new java.awt.event.ActionListener() {
+        SumProducersStart2.setText("+");
+        SumProducersStart2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SumProducersStart1ActionPerformed(evt);
+                SumProducersStart2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersStart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 50, 40));
+        PanelPlantaKev.add(SumProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 50, 40));
 
         MinusProducersClosers2.setText("-");
         MinusProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
@@ -291,7 +290,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Productores de Cierre");
-        PanelPlantaKev.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+        PanelPlantaKev.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
         jLabel25.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
@@ -382,35 +381,35 @@ public class Interface extends javax.swing.JFrame {
         jLabel36.setText("PlotTwist");
         PanelPlantaKev.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 70, -1));
 
-        MinusProducersClosers3.setText("-");
-        MinusProducersClosers3.addActionListener(new java.awt.event.ActionListener() {
+        MinusProducersPT2.setText("-");
+        MinusProducersPT2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusProducersClosers3ActionPerformed(evt);
+                MinusProducersPT2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusProducersClosers3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 50, 40));
+        PanelPlantaKev.add(MinusProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 50, 40));
 
-        ProducersClosers4.setEditable(false);
-        ProducersClosers4.setText("1");
-        ProducersClosers4.addActionListener(new java.awt.event.ActionListener() {
+        ProducersPT2.setEditable(false);
+        ProducersPT2.setText("1");
+        ProducersPT2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProducersClosers4ActionPerformed(evt);
+                ProducersPT2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(ProducersClosers4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 50, 40));
+        PanelPlantaKev.add(ProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 50, 40));
 
-        SumProducersClosers3.setText("+");
-        SumProducersClosers3.addActionListener(new java.awt.event.ActionListener() {
+        SumProducersPT2.setText("+");
+        SumProducersPT2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SumProducersClosers3ActionPerformed(evt);
+                SumProducersPT2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersClosers3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 50, 40));
+        PanelPlantaKev.add(SumProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 50, 40));
 
         jLabel30.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Productores de Inicio");
-        PanelPlantaKev.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        PanelPlantaKev.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
         countdownKevin.setEditable(false);
         countdownKevin.setText("1");
@@ -656,7 +655,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Productores de Inicio");
-        PanelPlantaJose.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        PanelPlantaJose.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
@@ -676,7 +675,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Productores de Cierre");
-        PanelPlantaJose.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        PanelPlantaJose.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
         StartButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         StartButton.setText("Start");
@@ -782,13 +781,13 @@ public class Interface extends javax.swing.JFrame {
         jLabel6.setText("Productores de PT");
         PanelPlantaJose.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
 
-        MinusProducersClosers1.setText("-");
-        MinusProducersClosers1.addActionListener(new java.awt.event.ActionListener() {
+        MinusProducersPT.setText("-");
+        MinusProducersPT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MinusProducersClosers1ActionPerformed(evt);
+                MinusProducersPTActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusProducersClosers1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 50, 40));
+        PanelPlantaJose.add(MinusProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 50, 40));
 
         ProducersPT.setEditable(false);
         ProducersPT.setText("1");
@@ -799,13 +798,13 @@ public class Interface extends javax.swing.JFrame {
         });
         PanelPlantaJose.add(ProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 50, 40));
 
-        SumProducersClosers1.setText("+");
-        SumProducersClosers1.addActionListener(new java.awt.event.ActionListener() {
+        SumProducersPT.setText("+");
+        SumProducersPT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SumProducersClosers1ActionPerformed(evt);
+                SumProducersPTActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumProducersClosers1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 50, 40));
+        PanelPlantaJose.add(SumProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 50, 40));
 
         jLabel38.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
@@ -911,7 +910,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_ProducersClosersActionPerformed
 
     private void MinusProducersClosersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosersActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_MinusProducersClosersActionPerformed
 
     private void AssemblersJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssemblersJ2ActionPerformed
@@ -936,19 +935,19 @@ public class Interface extends javax.swing.JFrame {
 
     private void SumAssemblersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumAssemblersActionPerformed
         // TODO add your handling code here:
-		int n = 0;
-		AssemblersJ1.setText(Integer.toString(n++));
-		Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
-		System.out.println(Utils.Constants.numAssemblersJose);
+        int n = 0;
+        AssemblersJ1.setText(Integer.toString(n++));
+        Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
+        System.out.println(Utils.Constants.numAssemblersJose);
 
     }//GEN-LAST:event_SumAssemblersActionPerformed
 
     private void MinusAssemblerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusAssemblerActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_MinusAssemblerActionPerformed
 
     private void MinusProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersIntroActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_MinusProducersIntroActionPerformed
 
     private void SumProducersIntroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersIntroActionPerformed
@@ -960,7 +959,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_SumProducersCredActionPerformed
 
     private void MinusProducersCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersCredActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_MinusProducersCredActionPerformed
 
     private void SumProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersStartActionPerformed
@@ -972,47 +971,49 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_SumProducersClosersActionPerformed
 
     private void MinusProducersStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersStartActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_MinusProducersStartActionPerformed
 
     private void SumProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosers2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.sumProducersClosers();
     }//GEN-LAST:event_SumProducersClosers2ActionPerformed
 
     private void MinusAssembler2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusAssembler2ActionPerformed
+        Utils.InterfaceFunctionsK.minusAssemblers();
         // TODO add your handling code here:
     }//GEN-LAST:event_MinusAssembler2ActionPerformed
 
     private void SumAssemblers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumAssemblers2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.sumAssemblers();
     }//GEN-LAST:event_SumAssemblers2ActionPerformed
 
     private void SumProducersIntro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersIntro2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.sumProducersIntro();
     }//GEN-LAST:event_SumProducersIntro2ActionPerformed
 
     private void MinusProducersIntro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersIntro2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.minusProducersIntro();
+
     }//GEN-LAST:event_MinusProducersIntro2ActionPerformed
 
     private void MinusProducersCred2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersCred2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.minusProducersCred();
     }//GEN-LAST:event_MinusProducersCred2ActionPerformed
 
     private void SumProducersCred2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersCred2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.sumProducersCred();
     }//GEN-LAST:event_SumProducersCred2ActionPerformed
 
     private void MinusProducersStart2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersStart2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.minusProducersStart();
     }//GEN-LAST:event_MinusProducersStart2ActionPerformed
 
-    private void SumProducersStart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersStart1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SumProducersStart1ActionPerformed
+    private void SumProducersStart2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersStart2ActionPerformed
+        Utils.InterfaceFunctionsK.sumProducersStart();
+    }//GEN-LAST:event_SumProducersStart2ActionPerformed
 
     private void MinusProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosers2ActionPerformed
-        // TODO add your handling code here:
+        Utils.InterfaceFunctionsK.minusProducersClosers();
     }//GEN-LAST:event_MinusProducersClosers2ActionPerformed
 
     private void ShowDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowDashboardActionPerformed
@@ -1021,13 +1022,13 @@ public class Interface extends javax.swing.JFrame {
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         // TODO add your handling code here:
-		//Seteo el numero de cada productor y ensamblador gracias a lo que coloquen en el textfield
-		//Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
-		//Utils.Constants.numProducerIntroJose = Integer.parseInt(ProducersIntro.getText());
-		//Utils.Constants.numProducerStartJose = Integer.parseInt(ProducersInicio.getText());
-		//Utils.Constants.numProducerClosureJose = Integer.parseInt(ProducersClosers.getText());
-		//Utils.Constants.numProducerCreditsJose = Integer.parseInt(ProducersCred.getText());
-		//Utils.Constants.numProducerPTJose = Integer.parseInt(ProducersPT.getText());
+        //Seteo el numero de cada productor y ensamblador gracias a lo que coloquen en el textfield
+        //Utils.Constants.numAssemblersJose = Integer.parseInt(AssemblersJ1.getText());
+        //Utils.Constants.numProducerIntroJose = Integer.parseInt(ProducersIntro.getText());
+        //Utils.Constants.numProducerStartJose = Integer.parseInt(ProducersInicio.getText());
+        //Utils.Constants.numProducerClosureJose = Integer.parseInt(ProducersClosers.getText());
+        //Utils.Constants.numProducerCreditsJose = Integer.parseInt(ProducersCred.getText());
+        //Utils.Constants.numProducerPTJose = Integer.parseInt(ProducersPT.getText());
         Utils.InterfaceFunctionsK.startRun();
     }//GEN-LAST:event_StartButtonActionPerformed
 
@@ -1079,29 +1080,29 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_countdownJoseActionPerformed
 
-    private void MinusProducersClosers1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosers1ActionPerformed
+    private void MinusProducersPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersPTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MinusProducersClosers1ActionPerformed
+    }//GEN-LAST:event_MinusProducersPTActionPerformed
 
     private void ProducersPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersPTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProducersPTActionPerformed
 
-    private void SumProducersClosers1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosers1ActionPerformed
+    private void SumProducersPTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersPTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SumProducersClosers1ActionPerformed
+    }//GEN-LAST:event_SumProducersPTActionPerformed
 
-    private void MinusProducersClosers3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersClosers3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MinusProducersClosers3ActionPerformed
+    private void MinusProducersPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinusProducersPT2ActionPerformed
+        Utils.InterfaceFunctionsK.minusProducersPT();
+    }//GEN-LAST:event_MinusProducersPT2ActionPerformed
 
-    private void ProducersClosers4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersClosers4ActionPerformed
+    private void ProducersPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersPT2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ProducersClosers4ActionPerformed
+    }//GEN-LAST:event_ProducersPT2ActionPerformed
 
-    private void SumProducersClosers3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersClosers3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SumProducersClosers3ActionPerformed
+    private void SumProducersPT2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumProducersPT2ActionPerformed
+        Utils.InterfaceFunctionsK.sumProducersPT();
+    }//GEN-LAST:event_SumProducersPT2ActionPerformed
 
     private void countdownKevinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countdownKevinActionPerformed
         // TODO add your handling code here:
@@ -1210,13 +1211,13 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton MinusAssembler;
     private javax.swing.JButton MinusAssembler2;
     private javax.swing.JButton MinusProducersClosers;
-    private javax.swing.JButton MinusProducersClosers1;
     private javax.swing.JButton MinusProducersClosers2;
-    private javax.swing.JButton MinusProducersClosers3;
     private javax.swing.JButton MinusProducersCred;
     private javax.swing.JButton MinusProducersCred2;
     private javax.swing.JButton MinusProducersIntro;
     private javax.swing.JButton MinusProducersIntro2;
+    private javax.swing.JButton MinusProducersPT;
+    private javax.swing.JButton MinusProducersPT2;
     private javax.swing.JButton MinusProducersStart;
     private javax.swing.JButton MinusProducersStart2;
     private javax.swing.JPanel PanelPlantaJose;
@@ -1225,7 +1226,6 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JTextField Pm2;
     public static javax.swing.JTextField ProducersClosers;
     public static javax.swing.JTextField ProducersClosers2;
-    public static javax.swing.JTextField ProducersClosers4;
     public static javax.swing.JTextField ProducersCred;
     public static javax.swing.JTextField ProducersCred2;
     public static javax.swing.JTextField ProducersInicio;
@@ -1233,21 +1233,22 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JTextField ProducersIntro;
     public static javax.swing.JTextField ProducersIntro2;
     public static javax.swing.JTextField ProducersPT;
+    public static javax.swing.JTextField ProducersPT2;
     private javax.swing.JToggleButton ShowDashboard;
     private javax.swing.JToggleButton StartButton;
     private javax.swing.JToggleButton StopButton;
     private javax.swing.JButton SumAssemblers;
     private javax.swing.JButton SumAssemblers2;
     private javax.swing.JButton SumProducersClosers;
-    private javax.swing.JButton SumProducersClosers1;
     private javax.swing.JButton SumProducersClosers2;
-    private javax.swing.JButton SumProducersClosers3;
     private javax.swing.JButton SumProducersCred;
     private javax.swing.JButton SumProducersCred2;
     private javax.swing.JButton SumProducersIntro;
     private javax.swing.JButton SumProducersIntro2;
+    private javax.swing.JButton SumProducersPT;
+    private javax.swing.JButton SumProducersPT2;
     private javax.swing.JButton SumProducersStart;
-    private javax.swing.JButton SumProducersStart1;
+    private javax.swing.JButton SumProducersStart2;
     public static javax.swing.JTextField countdownJose;
     public static javax.swing.JTextField countdownKevin;
     public static javax.swing.JTextField countdownKevin1;

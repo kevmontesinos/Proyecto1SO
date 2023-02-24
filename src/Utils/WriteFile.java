@@ -5,6 +5,8 @@
  */
 package Utils;
 
+import static Interfaces.Interface.CapsTotal;
+import static Interfaces.Interface.CapsTotal2;
 import static Interfaces.Interface.Ganancia1;
 import static Interfaces.Interface.Ganancia2;
 import static Interfaces.Interface.Gastos1;
@@ -70,16 +72,16 @@ public class WriteFile {
                     newdataGanancia2.add(Ganancia2.getText());
                     obj.put(key2, newdataGanancia2);
                     break;
-//                case "newcapsTotal1":
-//                    newcapsTotal1 = (JSONArray) map2.get(key2);
-//                    newcapsTotal1.add(CapsTotal.getText());
-//                    obj.put(key2, newcapsTotal1);
-//                    break;
-//                case "newcapsTotal2":
-//                    newcapsTotal2 = (JSONArray) map2.get(key2);
-//                    newcapsTotal2.add(CapsTotal2.getText());
-//                    obj.put(key2, newcapsTotal2);
-//                    break;
+                case "numCapsTotal1":
+                    newcapsTotal1 = (JSONArray) map2.get(key2);
+                    newcapsTotal1.add(CapsTotal.getText());
+                    obj.put(key2, newcapsTotal1);
+                    break;
+                case "numCapsTotal2":
+                    newcapsTotal2 = (JSONArray) map2.get(key2);
+                    newcapsTotal2.add(CapsTotal2.getText());
+                    obj.put(key2, newcapsTotal2);
+                    break;
                  case "perdidaPM1":
                      newperdidaPM1 = (JSONArray) map2.get(key2);
                      newperdidaPM1.add(RegistroPM1.getText());

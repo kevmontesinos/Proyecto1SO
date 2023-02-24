@@ -6,6 +6,13 @@
 package Classes.Assemblers;
 
 import Interfaces.Interface;
+import static Utils.Constants.driveClosureJ;
+import static Utils.Constants.driveCreditsJ;
+import static Utils.Constants.driveIntroJ;
+import static Utils.Constants.drivePTJ;
+import static Utils.Constants.driveStartJ;
+import static Utils.Constants.numCapsJ;
+import static Utils.Constants.tiempoDia;
 
 /**
  *
@@ -15,11 +22,10 @@ public class AssemblerJ extends Thread {
 
 	public int id;
     public boolean stop;
-    public int tiempoDia = 1; //esto tiene que venir luego del json
 
     public boolean enableToAssemble() {
-        if (Utils.Constants.driveIntroJ > 0 && Utils.Constants.driveCreditsJ > 0 && Utils.Constants.driveStartJ > 0 && Utils.Constants.driveClosureJ > 0 && Utils.Constants.drivePTJ > 0) {
-            return true;
+        if (Utils.Constants.driveIntroJ > 0 && Utils.Constants.driveCreditsJ > 0 && Utils.Constants.driveStartJ >= 2 && Utils.Constants.driveClosureJ > 0 && Utils.Constants.drivePTJ > 0) {
+			return true;
         }
         return false;
     }
@@ -40,38 +46,46 @@ public class AssemblerJ extends Thread {
 
                     //Para sacar 1 intro
                     Utils.Constants.mutexIntroJ.acquire();
-                    Utils.Constants.semIntroJ.acquire();
                     Utils.Constants.driveIntroJ--;
+					Interface.DriveIntro.setText(Integer.toString(driveIntroJ));
                     Utils.Constants.semIntroJ.release();
                     Utils.Constants.mutexIntroJ.release();
 
                     //Para sacar 1 credit
                     Utils.Constants.mutexCreditsJ.acquire();
-                    Utils.Constants.semCreditsJ.acquire();
                     Utils.Constants.driveCreditsJ--;
+					Interface.DriveCredits.setText(Integer.toString(driveCreditsJ));
                     Utils.Constants.semCreditsJ.release();
                     Utils.Constants.mutexCreditsJ.release();
 
                     //Para sacar 1 start
                     Utils.Constants.mutexStartJ.acquire();
-                    Utils.Constants.semStartJ.acquire();
                     Utils.Constants.driveStartJ--;
+                    Utils.Constants.driveStartJ--;
+					Interface.DriveInicio.setText(Integer.toString(driveStartJ));
                     Utils.Constants.semStartJ.release();
                     Utils.Constants.mutexStartJ.release();
+					
+					if(numCapsJ % 5 == 0 && numCapsJ>0){
+						
+						//Para sacar 1 plot twist
+						System.out.println("PT");
 
-                    //Para sacar 1 closure
-                    Utils.Constants.mutexClosureJ.acquire();
-                    Utils.Constants.semClosureJ.acquire();
-                    Utils.Constants.driveClosureJ--;
-                    Utils.Constants.semClosureJ.release();
-                    Utils.Constants.mutexClosureJ.release();
+						Utils.Constants.mutexPTJ.acquire();
+						Utils.Constants.drivePTJ--;
+						Interface.DrivePT.setText(Integer.toString(drivePTJ));
+						Utils.Constants.mutexPTJ.release();
+						
+					}else{
 
-                    //Para sacar 1 plot twist
-                    Utils.Constants.mutexPTJ.acquire();
-                    Utils.Constants.semPTJ.acquire();
-                    Utils.Constants.drivePTJ--;
-                    Utils.Constants.semPTJ.release();
-                    Utils.Constants.mutexPTJ.release();
+						//Para sacar 1 closure
+						Utils.Constants.mutexClosureJ.acquire();
+						Utils.Constants.driveClosureJ--;
+						Interface.DriveCierre.setText(Integer.toString(driveClosureJ));
+						Utils.Constants.semClosureJ.release();
+						Utils.Constants.mutexClosureJ.release();
+					}
+
 
                     //Se incrementa el número de capitulos producidos
                     Utils.Constants.numCapsJ++;

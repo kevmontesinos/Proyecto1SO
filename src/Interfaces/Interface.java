@@ -493,7 +493,7 @@ public class Interface extends javax.swing.JFrame {
                 Gastos2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(Gastos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 30, 20));
+        PanelPlantaKev.add(Gastos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 50, 20));
 
         jLabel45.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
@@ -507,7 +507,7 @@ public class Interface extends javax.swing.JFrame {
                 Ganancia2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(Ganancia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 30, 20));
+        PanelPlantaKev.add(Ganancia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 50, 20));
 
         CapsTotal2.setEditable(false);
         CapsTotal2.setText("0");
@@ -585,7 +585,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersInicioActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 50, 40));
+        PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 50, 40));
 
         AssemblersJ1.setEditable(false);
         AssemblersJ1.setText(Integer.toString(numAssemblersJose));
@@ -621,7 +621,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersClosersActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 50, 40));
+        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 50, 40));
 
         MinusProducersClosers.setText("-");
         MinusProducersClosers.addActionListener(new java.awt.event.ActionListener() {
@@ -894,7 +894,7 @@ public class Interface extends javax.swing.JFrame {
                 Ganancia1ActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(Ganancia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 30, 20));
+        PanelPlantaJose.add(Ganancia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 50, 20));
 
         RegistroPM1.setEditable(false);
         RegistroPM1.setText("0");
@@ -912,7 +912,7 @@ public class Interface extends javax.swing.JFrame {
                 Gastos1ActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(Gastos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 30, 20));
+        PanelPlantaJose.add(Gastos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 50, 20));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));

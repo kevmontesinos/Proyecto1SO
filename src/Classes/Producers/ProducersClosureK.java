@@ -6,6 +6,8 @@
 package Classes.Producers;
 
 import Interfaces.Interface;
+import static Utils.ConstantsK.driveClosureK;
+import static Utils.ConstantsK.tiempoDia;
 
 /**
  *
@@ -15,8 +17,6 @@ public class ProducersClosureK extends Thread {
 
     public int id;
     public boolean stop;
-
-    public int tiempoDia = 1; //esto tiene que venir luego del json
 
     public ProducersClosureK(int id) {
         this.stop = false;
@@ -32,6 +32,7 @@ public class ProducersClosureK extends Thread {
                 Utils.ConstantsK.mutexClosureK.acquire();
 
                 Utils.ConstantsK.driveClosureK++;
+				System.out.println(driveClosureK);
                 Interface.DriveCierre2.setText(Integer.toString(Utils.ConstantsK.driveClosureK));
 
                 Utils.ConstantsK.mutexClosureK.release();

@@ -6,13 +6,13 @@
 package Interfaces;
 
 import static Utils.Constants.numCapsJ;
-import static Utils.Constants.promedioCapsGananciasJose;
-import static Utils.Constants.promedioCapsGananciasKev;
 import static Utils.Constants.promedioGananciasJose;
 import static Utils.Constants.promedioGastosJose;
+import static Utils.Constants.promedioPerdidaPMJose;
 import static Utils.ConstantsK.numCaps;
 import static Utils.ConstantsK.promedioGananciasKev;
 import static Utils.ConstantsK.promedioGastosKev;
+import static Utils.ConstantsK.promedioPerdidaJefesKev;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import org.jfree.chart.ChartFactory;
@@ -101,18 +101,18 @@ public class Dashboard extends javax.swing.JFrame {
     private void generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarActionPerformed
         // TODO add your handling code here:
         //Telefonos vendidos
-        int capitulosProducidosPlanta1=numCaps;
-        int capitulosProducidosPlanta2=numCapsJ;
+        int capitulosProducidosPlanta1=numCapsJ;
+        int capitulosProducidosPlanta2=numCaps;
 
         DefaultCategoryDataset datos = new DefaultCategoryDataset();
 
-        datos.setValue(capitulosProducidosPlanta1, "Planta 1", "");
+        datos.setValue(capitulosProducidosPlanta1, "Productora 1", "");
 
-        datos.setValue(capitulosProducidosPlanta2, "Planta 2", "");
+        datos.setValue(capitulosProducidosPlanta2, "Productora 2", "");
 
         JFreeChart grafico_barras = ChartFactory.createBarChart3D(
             "Capitulos Producidos",
-            "Plantas",
+            "Productoras",
             "Numero de Capitulos",
 
             datos,
@@ -132,19 +132,18 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
         repaint();
 
-        //Ganancia telefonos
-        int gananciaTelefonosPlanta1=promedioCapsGananciasJose;
-        int gananciaTelefonosPlanta2=promedioCapsGananciasKev;
+        int perdidaPM1=promedioPerdidaPMJose;
+        int perdidaPM2=promedioPerdidaJefesKev;
 
         DefaultCategoryDataset datos2 = new DefaultCategoryDataset();
 
-        datos2.setValue(gananciaTelefonosPlanta1, "Planta 1", "");
+        datos2.setValue(perdidaPM1, "Productora 1", "");
 
-        datos2.setValue(gananciaTelefonosPlanta2, "Planta 2", "");
+        datos2.setValue(perdidaPM2, "Productora 2", "");
 
         JFreeChart grafico_barras2 = ChartFactory.createBarChart3D(
-            "Ganancia Capitulos",
-            "Plantas",
+            "Perdida PM",
+            "Productoras",
             "Dolares",
             datos2,
             PlotOrientation.VERTICAL,
@@ -169,13 +168,13 @@ public class Dashboard extends javax.swing.JFrame {
 
         DefaultCategoryDataset datos3 = new DefaultCategoryDataset();
 
-        datos3.setValue(gastosSueldosPlanta1, "Planta 1", "");
+        datos3.setValue(gastosSueldosPlanta1, "Productora 1", "");
 
-        datos3.setValue(gastosSueldosPlanta2, "Planta 2", "");
+        datos3.setValue(gastosSueldosPlanta2, "Productora 2", "");
 
         JFreeChart grafico_barras3 = ChartFactory.createBarChart3D(
             "Gastos Salarios",
-            "Plantas",
+            "Productoras",
             "Dolares",
             datos3,
             PlotOrientation.VERTICAL,
@@ -200,13 +199,13 @@ public class Dashboard extends javax.swing.JFrame {
 
         DefaultCategoryDataset datos4 = new DefaultCategoryDataset();
 
-        datos4.setValue(gananciaNetaPlanta1, "Planta 1", "");
+        datos4.setValue(gananciaNetaPlanta1, "Productora 1", "");
 
-        datos4.setValue(gananciaNetaPlanta2, "Planta 2", "");
+        datos4.setValue(gananciaNetaPlanta2, "Productora 2", "");
 
         JFreeChart grafico_barras4 = ChartFactory.createBarChart3D(
             "Ganancia Neta",
-            "Plantas",
+            "Productoras",
             "Dolares",
             datos4,
             PlotOrientation.VERTICAL,

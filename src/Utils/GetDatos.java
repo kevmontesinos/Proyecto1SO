@@ -1,12 +1,10 @@
 import static Interfaces.Interface.AssemblersJ1;
 import static Interfaces.Interface.AssemblersJ2;
 import static Interfaces.Interface.ProducersClosers;
-import static Interfaces.Interface.ProducersClosers2;
 import static Interfaces.Interface.ProducersPT2;
 import static Interfaces.Interface.ProducersCred;
 import static Interfaces.Interface.ProducersCred2;
 import static Interfaces.Interface.ProducersInicio;
-import static Interfaces.Interface.ProducersInicio2;
 import static Interfaces.Interface.ProducersIntro;
 import static Interfaces.Interface.ProducersIntro2;
 import static Interfaces.Interface.ProducersPT;
@@ -41,6 +39,8 @@ import static Utils.WriteFile.txtAction;
 import java.util.ArrayList;
 import java.util.Map;
 import org.json.simple.JSONArray;
+import static Interfaces.Interface.ProducersClosers2;
+import static Interfaces.Interface.ProducersInicio2;
 
 
 /**
@@ -155,11 +155,11 @@ public class GetDatos {
                     break;
                 case "numProducerClosureKev":
                     numProducerClosureKev = Integer.valueOf((String)map.get(key));
-                    ProducersClosers2.setText(Integer.toString(numProducerClosureKev));
+                    ProducersInicio2.setText(Integer.toString(numProducerClosureKev));
                     break;
                 case "numProducerStartKev":
                     numProducerStartKev = Integer.valueOf((String)map.get(key));
-                    ProducersInicio2.setText(Integer.toString(numProducerStartKev));
+                    ProducersClosers2.setText(Integer.toString(numProducerStartKev));
                     break;
                 case "numProducerPTKev":
                     numProducerPTKev = Integer.valueOf((String)map.get(key));

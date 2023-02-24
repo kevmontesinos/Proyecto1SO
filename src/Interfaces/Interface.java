@@ -33,8 +33,8 @@ public class Interface extends javax.swing.JFrame {
         AssemblersJ2 = new javax.swing.JTextField();
         ProducersIntro2 = new javax.swing.JTextField();
         ProducersCred2 = new javax.swing.JTextField();
-        ProducersClosers2 = new javax.swing.JTextField();
         ProducersInicio2 = new javax.swing.JTextField();
+        ProducersClosers2 = new javax.swing.JTextField();
         SumProducersClosers2 = new javax.swing.JButton();
         MinusAssembler2 = new javax.swing.JButton();
         SumAssemblers2 = new javax.swing.JButton();
@@ -69,7 +69,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         countdownKevin = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        Pm2 = new javax.swing.JTextField();
+        RegistroPM2 = new javax.swing.JTextField();
         Director2 = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
@@ -79,6 +79,10 @@ public class Interface extends javax.swing.JFrame {
         Ganancia2 = new javax.swing.JTextField();
         CapsTotal2 = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        Pm4 = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
+        SalarioPm2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         PanelPlantaJose = new javax.swing.JPanel();
         Director1 = new javax.swing.JTextField();
@@ -122,17 +126,21 @@ public class Interface extends javax.swing.JFrame {
         MinusProducersPT = new javax.swing.JButton();
         ProducersPT = new javax.swing.JTextField();
         SumProducersPT = new javax.swing.JButton();
-        jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         Ganancia1 = new javax.swing.JTextField();
+        RegistroPM1 = new javax.swing.JTextField();
         Gastos1 = new javax.swing.JTextField();
-        Pm1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         countdownKevin1 = new javax.swing.JTextField();
         CapsTotal = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        Pm3 = new javax.swing.JTextField();
+        SalarioPm1 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
@@ -149,7 +157,7 @@ public class Interface extends javax.swing.JFrame {
                 AssemblersJ2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(AssemblersJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 50, 40));
+        PanelPlantaKev.add(AssemblersJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 50, 40));
 
         ProducersIntro2.setEditable(false);
         ProducersIntro2.setText("1");
@@ -158,7 +166,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersIntro2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(ProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 50, 40));
+        PanelPlantaKev.add(ProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 50, 40));
 
         ProducersCred2.setEditable(false);
         ProducersCred2.setText("1");
@@ -167,16 +175,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersCred2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(ProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 50, 40));
-
-        ProducersClosers2.setEditable(false);
-        ProducersClosers2.setText("1");
-        ProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProducersClosers2ActionPerformed(evt);
-            }
-        });
-        PanelPlantaKev.add(ProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 50, 40));
+        PanelPlantaKev.add(ProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 50, 40));
 
         ProducersInicio2.setEditable(false);
         ProducersInicio2.setText("1");
@@ -185,7 +184,16 @@ public class Interface extends javax.swing.JFrame {
                 ProducersInicio2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(ProducersInicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 50, 40));
+        PanelPlantaKev.add(ProducersInicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 50, 40));
+
+        ProducersClosers2.setEditable(false);
+        ProducersClosers2.setText("1");
+        ProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProducersClosers2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(ProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 50, 40));
 
         SumProducersClosers2.setText("+");
         SumProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +201,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersClosers2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 50, 40));
+        PanelPlantaKev.add(SumProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 50, 40));
 
         MinusAssembler2.setText("-");
         MinusAssembler2.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +209,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusAssembler2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusAssembler2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 50, 40));
+        PanelPlantaKev.add(MinusAssembler2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 50, 40));
 
         SumAssemblers2.setText("+");
         SumAssemblers2.addActionListener(new java.awt.event.ActionListener() {
@@ -209,7 +217,7 @@ public class Interface extends javax.swing.JFrame {
                 SumAssemblers2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumAssemblers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 50, 40));
+        PanelPlantaKev.add(SumAssemblers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 50, 40));
 
         SumProducersIntro2.setText("+");
         SumProducersIntro2.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +225,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersIntro2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 50, 40));
+        PanelPlantaKev.add(SumProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 50, 40));
 
         MinusProducersIntro2.setText("-");
         MinusProducersIntro2.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +233,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersIntro2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 50, 40));
+        PanelPlantaKev.add(MinusProducersIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 50, 40));
 
         MinusProducersCred2.setText("-");
         MinusProducersCred2.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +241,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersCred2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 50, 40));
+        PanelPlantaKev.add(MinusProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 50, 40));
 
         SumProducersCred2.setText("+");
         SumProducersCred2.addActionListener(new java.awt.event.ActionListener() {
@@ -241,7 +249,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersCred2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 50, 40));
+        PanelPlantaKev.add(SumProducersCred2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 50, 40));
 
         MinusProducersStart2.setText("-");
         MinusProducersStart2.addActionListener(new java.awt.event.ActionListener() {
@@ -249,7 +257,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersStart2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 50, 40));
+        PanelPlantaKev.add(MinusProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 50, 40));
 
         SumProducersStart2.setText("+");
         SumProducersStart2.addActionListener(new java.awt.event.ActionListener() {
@@ -257,7 +265,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersStart2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 50, 40));
+        PanelPlantaKev.add(SumProducersStart2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 50, 40));
 
         MinusProducersClosers2.setText("-");
         MinusProducersClosers2.addActionListener(new java.awt.event.ActionListener() {
@@ -265,7 +273,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersClosers2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 50, 40));
+        PanelPlantaKev.add(MinusProducersClosers2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 50, 40));
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -275,27 +283,27 @@ public class Interface extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Ensambladores");
-        PanelPlantaKev.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        PanelPlantaKev.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Productores de Intro");
-        PanelPlantaKev.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        PanelPlantaKev.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Productores de Creditos");
-        PanelPlantaKev.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        PanelPlantaKev.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Productores de Cierre");
-        PanelPlantaKev.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        PanelPlantaKev.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         jLabel25.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Productores de PT");
-        PanelPlantaKev.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
+        PanelPlantaKev.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
 
         ShowDashboard.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         ShowDashboard.setText("Dashboard");
@@ -304,82 +312,87 @@ public class Interface extends javax.swing.JFrame {
                 ShowDashboardActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(ShowDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, 110, 40));
+        PanelPlantaKev.add(ShowDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, 110, 40));
 
         DriveIntro2.setEditable(false);
+        DriveIntro2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveIntro2.setText("0");
         DriveIntro2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveIntro2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(DriveIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 20, 20));
+        PanelPlantaKev.add(DriveIntro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 20, 20));
 
         DriveCredits2.setEditable(false);
+        DriveCredits2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveCredits2.setText("0");
         DriveCredits2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveCredits2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(DriveCredits2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 20, 20));
+        PanelPlantaKev.add(DriveCredits2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 20, 20));
 
         DriveInicio2.setEditable(false);
+        DriveInicio2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveInicio2.setText("0");
         DriveInicio2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveInicio2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(DriveInicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 20, 20));
+        PanelPlantaKev.add(DriveInicio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 20, 20));
 
         DriveCierre2.setEditable(false);
+        DriveCierre2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveCierre2.setText("0");
         DriveCierre2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveCierre2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(DriveCierre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 20, 20));
+        PanelPlantaKev.add(DriveCierre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 20, 20));
 
         DrivePt2.setEditable(false);
+        DrivePt2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DrivePt2.setText("0");
         DrivePt2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DrivePt2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(DrivePt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 20, 20));
+        PanelPlantaKev.add(DrivePt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 20, 20));
 
         jLabel26.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Drives:");
-        PanelPlantaKev.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 80, -1));
+        PanelPlantaKev.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 80, -1));
 
         jLabel32.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Intro");
-        PanelPlantaKev.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 40, -1));
+        PanelPlantaKev.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 40, -1));
 
         jLabel33.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Credits");
-        PanelPlantaKev.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, 50, -1));
+        PanelPlantaKev.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 50, -1));
 
         jLabel34.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("Inicio");
-        PanelPlantaKev.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 40, -1));
+        PanelPlantaKev.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 40, -1));
 
         jLabel35.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("Cierre");
-        PanelPlantaKev.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 50, -1));
+        PanelPlantaKev.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 50, -1));
 
         jLabel36.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setText("PlotTwist");
-        PanelPlantaKev.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 70, -1));
+        jLabel36.setText("PT");
+        PanelPlantaKev.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 70, -1));
 
         MinusProducersPT2.setText("-");
         MinusProducersPT2.addActionListener(new java.awt.event.ActionListener() {
@@ -387,7 +400,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersPT2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(MinusProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 50, 40));
+        PanelPlantaKev.add(MinusProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 50, 40));
 
         ProducersPT2.setEditable(false);
         ProducersPT2.setText("1");
@@ -396,7 +409,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersPT2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(ProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 50, 40));
+        PanelPlantaKev.add(ProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 50, 40));
 
         SumProducersPT2.setText("+");
         SumProducersPT2.addActionListener(new java.awt.event.ActionListener() {
@@ -404,12 +417,12 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersPT2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(SumProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 50, 40));
+        PanelPlantaKev.add(SumProducersPT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 50, 40));
 
         jLabel30.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Productores de Inicio");
-        PanelPlantaKev.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+        PanelPlantaKev.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         countdownKevin.setEditable(false);
         countdownKevin.setText("1");
@@ -425,38 +438,38 @@ public class Interface extends javax.swing.JFrame {
         jLabel7.setText("Countdown:");
         PanelPlantaKev.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 120, 20));
 
-        Pm2.setEditable(false);
-        Pm2.setText("1");
-        Pm2.addActionListener(new java.awt.event.ActionListener() {
+        RegistroPM2.setEditable(false);
+        RegistroPM2.setText("0");
+        RegistroPM2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pm2ActionPerformed(evt);
+                RegistroPM2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(Pm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 120, 20));
+        PanelPlantaKev.add(RegistroPM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 120, 20));
 
         Director2.setEditable(false);
-        Director2.setText("1");
+        Director2.setText("Durmiendo...");
         Director2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Director2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(Director2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 120, 20));
+        PanelPlantaKev.add(Director2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 120, 20));
 
         jLabel42.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("Director:");
-        PanelPlantaKev.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, 60, -1));
+        PanelPlantaKev.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 60, -1));
 
         jLabel43.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setText("PM:");
-        PanelPlantaKev.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 430, 40, -1));
+        jLabel43.setText("Faltas PM: ");
+        PanelPlantaKev.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 90, -1));
 
         jLabel44.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Gastos:");
-        PanelPlantaKev.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 60, -1));
+        PanelPlantaKev.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 60, -1));
 
         Gastos2.setEditable(false);
         Gastos2.setText("1");
@@ -465,12 +478,12 @@ public class Interface extends javax.swing.JFrame {
                 Gastos2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(Gastos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 30, 20));
+        PanelPlantaKev.add(Gastos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 30, 20));
 
         jLabel45.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("Ganancia:");
-        PanelPlantaKev.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 70, -1));
+        PanelPlantaKev.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 70, -1));
 
         Ganancia2.setEditable(false);
         Ganancia2.setText("1");
@@ -479,7 +492,7 @@ public class Interface extends javax.swing.JFrame {
                 Ganancia2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(Ganancia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 30, 20));
+        PanelPlantaKev.add(Ganancia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 30, 20));
 
         CapsTotal2.setEditable(false);
         CapsTotal2.setText("0");
@@ -488,16 +501,44 @@ public class Interface extends javax.swing.JFrame {
                 CapsTotal2ActionPerformed(evt);
             }
         });
-        PanelPlantaKev.add(CapsTotal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 20, -1));
+        PanelPlantaKev.add(CapsTotal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 30, 30));
 
         jLabel47.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setText("Capítulos");
         jLabel47.setToolTipText("");
-        PanelPlantaKev.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 60, 30));
+        PanelPlantaKev.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 60, 30));
+
+        jLabel50.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setText("PM:");
+        PanelPlantaKev.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 40, -1));
+
+        Pm4.setEditable(false);
+        Pm4.setText("Durmiendo...");
+        Pm4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pm4ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(Pm4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 120, 20));
+
+        jLabel51.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setText("Salario PM: ");
+        PanelPlantaKev.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 90, -1));
+
+        SalarioPm2.setEditable(false);
+        SalarioPm2.setText("0");
+        SalarioPm2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalarioPm2ActionPerformed(evt);
+            }
+        });
+        PanelPlantaKev.add(SalarioPm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 120, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/got.png"))); // NOI18N
-        PanelPlantaKev.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-940, -20, 1390, 960));
+        PanelPlantaKev.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-960, -10, 1390, 960));
 
         getContentPane().add(PanelPlantaKev, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 430, 570));
 
@@ -505,16 +546,16 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Director1.setEditable(false);
-        Director1.setText("1");
+        Director1.setText("Durmiendo...");
         Director1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Director1ActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(Director1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 120, 20));
+        PanelPlantaJose.add(Director1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 490, 120, 20));
 
         countdownJose.setEditable(false);
-        countdownJose.setText(Integer.toString(Utils.Constants.countdownJose));
+        countdownJose.setText("1");
         countdownJose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 countdownJoseActionPerformed(evt);
@@ -529,7 +570,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersInicioActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 50, 40));
+        PanelPlantaJose.add(ProducersInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 50, 40));
 
         AssemblersJ1.setEditable(false);
         AssemblersJ1.setText("1");
@@ -538,7 +579,7 @@ public class Interface extends javax.swing.JFrame {
                 AssemblersJ1ActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(AssemblersJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 50, 40));
+        PanelPlantaJose.add(AssemblersJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 50, 40));
 
         ProducersIntro.setEditable(false);
         ProducersIntro.setText("1");
@@ -547,7 +588,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersIntroActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 50, 40));
+        PanelPlantaJose.add(ProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 50, 40));
 
         ProducersCred.setEditable(false);
         ProducersCred.setText("1");
@@ -556,7 +597,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersCredActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 50, 40));
+        PanelPlantaJose.add(ProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 50, 40));
 
         ProducersClosers.setEditable(false);
         ProducersClosers.setText("1");
@@ -565,7 +606,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersClosersActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 50, 40));
+        PanelPlantaJose.add(ProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 50, 40));
 
         MinusProducersClosers.setText("-");
         MinusProducersClosers.addActionListener(new java.awt.event.ActionListener() {
@@ -573,7 +614,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersClosersActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 50, 40));
+        PanelPlantaJose.add(MinusProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 50, 40));
 
         SumAssemblers.setText("+");
         SumAssemblers.addActionListener(new java.awt.event.ActionListener() {
@@ -581,7 +622,7 @@ public class Interface extends javax.swing.JFrame {
                 SumAssemblersActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumAssemblers, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 50, 40));
+        PanelPlantaJose.add(SumAssemblers, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 50, 40));
 
         MinusAssembler.setText("-");
         MinusAssembler.addActionListener(new java.awt.event.ActionListener() {
@@ -589,7 +630,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusAssemblerActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusAssembler, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 50, 40));
+        PanelPlantaJose.add(MinusAssembler, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 50, 40));
 
         MinusProducersIntro.setText("-");
         MinusProducersIntro.addActionListener(new java.awt.event.ActionListener() {
@@ -597,7 +638,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersIntroActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 50, 40));
+        PanelPlantaJose.add(MinusProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 50, 40));
 
         SumProducersIntro.setText("+");
         SumProducersIntro.addActionListener(new java.awt.event.ActionListener() {
@@ -605,7 +646,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersIntroActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 50, 40));
+        PanelPlantaJose.add(SumProducersIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 50, 40));
 
         SumProducersCred.setText("+");
         SumProducersCred.addActionListener(new java.awt.event.ActionListener() {
@@ -613,7 +654,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersCredActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 50, 40));
+        PanelPlantaJose.add(SumProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 50, 40));
 
         MinusProducersCred.setText("-");
         MinusProducersCred.addActionListener(new java.awt.event.ActionListener() {
@@ -621,7 +662,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersCredActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 50, 40));
+        PanelPlantaJose.add(MinusProducersCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 50, 40));
 
         SumProducersStart.setText("+");
         SumProducersStart.addActionListener(new java.awt.event.ActionListener() {
@@ -629,7 +670,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersStartActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 50, 40));
+        PanelPlantaJose.add(SumProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 50, 40));
 
         SumProducersClosers.setText("+");
         SumProducersClosers.addActionListener(new java.awt.event.ActionListener() {
@@ -637,7 +678,7 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersClosersActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 50, 40));
+        PanelPlantaJose.add(SumProducersClosers, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 50, 40));
 
         MinusProducersStart.setText("-");
         MinusProducersStart.addActionListener(new java.awt.event.ActionListener() {
@@ -645,7 +686,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersStartActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 50, 40));
+        PanelPlantaJose.add(MinusProducersStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 50, 40));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -655,27 +696,27 @@ public class Interface extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Productores de Inicio");
-        PanelPlantaJose.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        PanelPlantaJose.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Ensambladores");
-        PanelPlantaJose.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
+        PanelPlantaJose.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Productores de Intro");
-        PanelPlantaJose.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
+        PanelPlantaJose.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Productores de Creditos");
-        PanelPlantaJose.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        PanelPlantaJose.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Productores de Cierre");
-        PanelPlantaJose.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        PanelPlantaJose.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
         StartButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         StartButton.setText("Start");
@@ -684,7 +725,7 @@ public class Interface extends javax.swing.JFrame {
                 StartButtonActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(StartButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 70, 40));
+        PanelPlantaJose.add(StartButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 70, 40));
 
         StopButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         StopButton.setText("Stop");
@@ -701,85 +742,90 @@ public class Interface extends javax.swing.JFrame {
         PanelPlantaJose.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 120, 20));
 
         DriveCredits.setEditable(false);
+        DriveCredits.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveCredits.setText("0");
         DriveCredits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveCreditsActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(DriveCredits, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 20, 20));
+        PanelPlantaJose.add(DriveCredits, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 20, 20));
 
         DriveInicio.setEditable(false);
+        DriveInicio.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveInicio.setText("0");
         DriveInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveInicioActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(DriveInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 20, 20));
+        PanelPlantaJose.add(DriveInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 20, 20));
 
         DriveCierre.setEditable(false);
+        DriveCierre.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveCierre.setText("0");
         DriveCierre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveCierreActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(DriveCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 20, 20));
+        PanelPlantaJose.add(DriveCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 20, 20));
 
         DrivePT.setEditable(false);
+        DrivePT.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DrivePT.setText("0");
         DrivePT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DrivePTActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(DrivePT, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 20, 20));
+        PanelPlantaJose.add(DrivePT, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 20, 20));
 
         DriveIntro.setEditable(false);
+        DriveIntro.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         DriveIntro.setText("0");
         DriveIntro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DriveIntroActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(DriveIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 20, 20));
+        PanelPlantaJose.add(DriveIntro, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 20, 20));
 
         jLabel27.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Credits");
-        PanelPlantaJose.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 50, -1));
+        PanelPlantaJose.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 50, -1));
 
         jLabel28.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Inicio");
-        PanelPlantaJose.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 40, -1));
+        PanelPlantaJose.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 40, -1));
 
         jLabel29.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("Cierre");
-        PanelPlantaJose.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 50, -1));
+        PanelPlantaJose.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 50, -1));
 
         jLabel31.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("Gastos:");
-        PanelPlantaJose.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 60, -1));
+        PanelPlantaJose.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 60, -1));
 
         jLabel37.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Capítulos");
         jLabel37.setToolTipText("");
-        PanelPlantaJose.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 60, 30));
+        PanelPlantaJose.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 70, 40));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Drives:");
-        PanelPlantaJose.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 80, -1));
+        PanelPlantaJose.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 80, -1));
 
         jLabel6.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Productores de PT");
-        PanelPlantaJose.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, -1));
+        PanelPlantaJose.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
         MinusProducersPT.setText("-");
         MinusProducersPT.addActionListener(new java.awt.event.ActionListener() {
@@ -787,7 +833,7 @@ public class Interface extends javax.swing.JFrame {
                 MinusProducersPTActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(MinusProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 50, 40));
+        PanelPlantaJose.add(MinusProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 50, 40));
 
         ProducersPT.setEditable(false);
         ProducersPT.setText("1");
@@ -796,7 +842,7 @@ public class Interface extends javax.swing.JFrame {
                 ProducersPTActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(ProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 50, 40));
+        PanelPlantaJose.add(ProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 50, 40));
 
         SumProducersPT.setText("+");
         SumProducersPT.addActionListener(new java.awt.event.ActionListener() {
@@ -804,27 +850,27 @@ public class Interface extends javax.swing.JFrame {
                 SumProducersPTActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(SumProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 50, 40));
+        PanelPlantaJose.add(SumProducersPT, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 50, 40));
+
+        jLabel39.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText("Faltas PM: ");
+        PanelPlantaJose.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 80, -1));
 
         jLabel38.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("Ganancia:");
-        PanelPlantaJose.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 70, -1));
-
-        jLabel39.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText("PM:");
-        PanelPlantaJose.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 40, -1));
+        PanelPlantaJose.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 70, -1));
 
         jLabel40.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("Director:");
-        PanelPlantaJose.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 480, 60, -1));
+        PanelPlantaJose.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 60, -1));
 
         jLabel41.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("Intro");
-        PanelPlantaJose.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 40, -1));
+        PanelPlantaJose.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 40, -1));
 
         Ganancia1.setEditable(false);
         Ganancia1.setText("1");
@@ -833,7 +879,16 @@ public class Interface extends javax.swing.JFrame {
                 Ganancia1ActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(Ganancia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 30, 20));
+        PanelPlantaJose.add(Ganancia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 30, 20));
+
+        RegistroPM1.setEditable(false);
+        RegistroPM1.setText("0");
+        RegistroPM1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistroPM1ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(RegistroPM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 120, 20));
 
         Gastos1.setEditable(false);
         Gastos1.setText("1");
@@ -842,16 +897,7 @@ public class Interface extends javax.swing.JFrame {
                 Gastos1ActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(Gastos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 30, 20));
-
-        Pm1.setEditable(false);
-        Pm1.setText("1");
-        Pm1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pm1ActionPerformed(evt);
-            }
-        });
-        PanelPlantaJose.add(Pm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, 120, 20));
+        PanelPlantaJose.add(Gastos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 30, 20));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -874,15 +920,43 @@ public class Interface extends javax.swing.JFrame {
                 CapsTotalActionPerformed(evt);
             }
         });
-        PanelPlantaJose.add(CapsTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 20, -1));
+        PanelPlantaJose.add(CapsTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 30, 30));
 
         jLabel46.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel46.setText("PlotTwist");
-        PanelPlantaJose.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 70, -1));
+        jLabel46.setText("PT");
+        PanelPlantaJose.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 70, -1));
+
+        jLabel48.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setText("PM:");
+        PanelPlantaJose.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 40, -1));
+
+        jLabel49.setFont(new java.awt.Font("Century Schoolbook", 1, 12)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setText("Salario PM:");
+        PanelPlantaJose.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 80, -1));
+
+        Pm3.setEditable(false);
+        Pm3.setText("Durmiendo...");
+        Pm3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pm3ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(Pm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, 120, 20));
+
+        SalarioPm1.setEditable(false);
+        SalarioPm1.setText("0");
+        SalarioPm1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalarioPm1ActionPerformed(evt);
+            }
+        });
+        PanelPlantaJose.add(SalarioPm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 120, 20));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/r&morty.jpg"))); // NOI18N
-        PanelPlantaJose.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-910, 0, 1600, 780));
+        PanelPlantaJose.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-930, -50, 1600, 780));
 
         getContentPane().add(PanelPlantaJose, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 570));
 
@@ -925,13 +999,13 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ProducersCred2ActionPerformed
 
-    private void ProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersClosers2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProducersClosers2ActionPerformed
-
     private void ProducersInicio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersInicio2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProducersInicio2ActionPerformed
+
+    private void ProducersClosers2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProducersClosers2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProducersClosers2ActionPerformed
 
     private void SumAssemblersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumAssemblersActionPerformed
         // TODO add your handling code here:
@@ -1120,13 +1194,13 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Gastos1ActionPerformed
 
-    private void Pm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pm1ActionPerformed
+    private void RegistroPM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroPM1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Pm1ActionPerformed
+    }//GEN-LAST:event_RegistroPM1ActionPerformed
 
-    private void Pm2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pm2ActionPerformed
+    private void RegistroPM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroPM2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Pm2ActionPerformed
+    }//GEN-LAST:event_RegistroPM2ActionPerformed
 
     private void Director2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Director2ActionPerformed
         // TODO add your handling code here:
@@ -1151,6 +1225,22 @@ public class Interface extends javax.swing.JFrame {
     private void CapsTotal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CapsTotal2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CapsTotal2ActionPerformed
+
+    private void Pm3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pm3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pm3ActionPerformed
+
+    private void SalarioPm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioPm1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalarioPm1ActionPerformed
+
+    private void Pm4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pm4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pm4ActionPerformed
+
+    private void SalarioPm2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalarioPm2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalarioPm2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1222,8 +1312,8 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton MinusProducersStart2;
     private javax.swing.JPanel PanelPlantaJose;
     private javax.swing.JPanel PanelPlantaKev;
-    public static javax.swing.JTextField Pm1;
-    public static javax.swing.JTextField Pm2;
+    public static javax.swing.JTextField Pm3;
+    public static javax.swing.JTextField Pm4;
     public static javax.swing.JTextField ProducersClosers;
     public static javax.swing.JTextField ProducersClosers2;
     public static javax.swing.JTextField ProducersCred;
@@ -1234,6 +1324,10 @@ public class Interface extends javax.swing.JFrame {
     public static javax.swing.JTextField ProducersIntro2;
     public static javax.swing.JTextField ProducersPT;
     public static javax.swing.JTextField ProducersPT2;
+    public static javax.swing.JTextField RegistroPM1;
+    public static javax.swing.JTextField RegistroPM2;
+    public static javax.swing.JTextField SalarioPm1;
+    public static javax.swing.JTextField SalarioPm2;
     private javax.swing.JToggleButton ShowDashboard;
     private javax.swing.JToggleButton StartButton;
     private javax.swing.JToggleButton StopButton;
@@ -1290,7 +1384,11 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

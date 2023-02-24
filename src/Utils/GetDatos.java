@@ -2,7 +2,7 @@ import static Interfaces.Interface.AssemblersJ1;
 import static Interfaces.Interface.AssemblersJ2;
 import static Interfaces.Interface.ProducersClosers;
 import static Interfaces.Interface.ProducersClosers2;
-import static Interfaces.Interface.ProducersClosers4;
+import static Interfaces.Interface.ProducersPT2;
 import static Interfaces.Interface.ProducersCred;
 import static Interfaces.Interface.ProducersCred2;
 import static Interfaces.Interface.ProducersInicio;
@@ -163,7 +163,7 @@ public class GetDatos {
                     break;
                 case "numProducerPTKev":
                     numProducerPTKev = Integer.valueOf((String)map.get(key));
-                    ProducersClosers4.setText(Integer.toString(numProducerPTKev));
+                    ProducersPT2.setText(Integer.toString(numProducerPTKev));
                     break;
             }
     }
